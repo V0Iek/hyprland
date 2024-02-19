@@ -1,0 +1,71 @@
+{
+  //  _          __ _
+  // | |    ___ / _| |_
+  // | |   / _ \ |_| __|
+  // | |__|  __/  _| |_
+  // |_____\___|_|  \__|
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+  
+  "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true
+  },
+
+
+  //   ____           _
+  //  / ___|___ _ __ | |_ ___ _ __
+  // | |   / _ \ '_ \| __/ _ \ '__|
+  // | |__|  __/ | | | ||  __/ |
+  //  \____\___|_| |_|\__\___|_|
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate"
+  },
+
+
+  //  ____  _       _     _
+  // |  _ \(_) __ _| |__ | |_
+  // | |_) | |/ _` | '_ \| __|
+  // |  _ <| | (_| | | | | |_
+  // |_| \_\_|\__, |_| |_|\__|
+  //          |___/
+
+  "custom/pacman": {
+    "format": "  {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "alacritty -e 'sudo pacman -Syu'",
+    "signal": 8
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+  },
+
+  "clock": {
+    "interval": 60,
+    "tooltip": true,
+    "format": "{:%H:%M}",
+    "tooltip-format": "{:%Y-%m-%d}"
+  }
+}
