@@ -23,7 +23,7 @@
   //  \____\___|_| |_|\__\___|_|
 
   "hyprland/workspaces": {
-    "all-outputs": true,
+    "all-outputs": false,
     "on-click": "activate"
   },
 
