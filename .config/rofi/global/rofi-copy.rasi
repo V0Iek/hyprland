@@ -1,6 +1,6 @@
 configuration {
     font: "Inter Regular 10";
-    sidebar-mode: false;
+    sidebar-mode: true;
     show-icons: true;
     icon-theme: "Nordzy";
     fullscreen: false;
@@ -25,13 +25,13 @@ window {
     transparency: "real";
     background-color: #1917244D;
     text-color: #6e6a86;
-    location: 0;
-    anchor: 0;
+    location: west;
+    anchor: west;
     x-offset: 5px;
     y-offset: -50px;
-    height: 50%;
-    width: 750px;
-    orientation: horizontal;
+    height: 70%;
+    width: 350px;
+    orientation: vertical;
 }
 
 prompt {
