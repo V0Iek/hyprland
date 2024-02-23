@@ -5,13 +5,13 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="$HOME/.config/rofi/styles"
-rofi_command="rofi -theme $dir/three.rasi"
+dir="$HOME/.config/rofi/themes"
+rofi_command="rofi -theme $dir/catppuccin-mocha.rasi"
 
 # Options
-screen=""
-area=""
-window=""
+screen="  Screen"
+area="  Area"
+window="  Window"
 
 # Variable passed to rofi
 options="$screen\n$area\n$window"
@@ -28,4 +28,3 @@ case $chosen in
 		sleep 0.4; grim -g "$(hyprctl activewindow | grep at: | cut -d' ' -f2) $(hyprctl activewindow | grep size: | cut -d' ' -f2 | sed 's/,/x/g')" - | wl-copy
         ;;
 esac
-
