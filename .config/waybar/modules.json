@@ -43,7 +43,8 @@
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
     "on-click": "alacritty -e 'sudo pacman -Syu'",
-    "signal": 8
+    "signal": 8,
+    "tooltip": false
   },
 
   "pulseaudio": {
@@ -117,7 +118,7 @@
   "clock": {
     "interval": 60,
     "tooltip": true,
-    "format": "{:%H:%M}",
+    "format": "{:%Od %b %H:%M}",
     "tooltip-format": "{:%Y-%m-%d}"
   },
 
