@@ -12,95 +12,90 @@
 /* -----------------------------------------------------
  * Import Pywal colors 
  * ----------------------------------------------------- */
- @import "mocha.css";
+@import "mocha.css";
 
 /* -----------------------------------------------------
  * General 
  * ----------------------------------------------------- */
 
 * {
-    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
 }
 
 window#waybar {
-    background: transparent;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
-
 
 /* -----------------------------------------------------
  * Tooltips
  * ----------------------------------------------------- */
 
 tooltip {
-    border-radius: 10px;
-    background-color: @base;
-    opacity:0.8;
-    padding:20px;
-    margin:0px;
+  border-radius: 10px;
+  background-color: @base;
+  opacity: 0.8;
+  padding: 20px;
+  margin: 0px;
 }
 
 tooltip label {
-    color: @text;
+  color: @text;
 }
-
 
 /* -----------------------------------------------------
  * Modules
  * ----------------------------------------------------- */
 
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  margin-right: 0;
 }
-
 
 /*  _          __ _
  * | |    ___ / _| |_
  * | |   / _ \ |_| __|
  * | |__|  __/  _| |_
  * |_____\___|_|  \__|
-*/ 
+*/
 
 /* -----------------------------------------------------
  * Appmenu
  * ----------------------------------------------------- */
 
 #custom-appmenu {
-    background-color: @base;
-    font-size: 16px;
-    color: @blue;
-    border-radius: 15px;
-    padding: 0px 10px 0px 10px;
-    margin: 3px 15px 3px 14px;
-    opacity:0.8;
+  background-color: @base;
+  font-size: 16px;
+  color: @blue;
+  border-radius: 15px;
+  padding: 0px 10px 0px 10px;
+  margin: 3px 15px 3px 14px;
+  opacity: 0.8;
 }
-
 
 /* -----------------------------------------------------
  * Window
  * ----------------------------------------------------- */
 
 #window {
-    background: @base;
-    margin: 5px 15px 5px 0px;
-    padding: 2px 10px 0px 10px;
-    border-radius: 12px;
-    color: @text;
-    font-size:16px;
-    font-weight:normal;
-    opacity:0.8;
+  background: @base;
+  margin: 5px 15px 5px 0px;
+  padding: 2px 10px 0px 10px;
+  border-radius: 12px;
+  color: @text;
+  font-size: 16px;
+  font-weight: normal;
+  opacity: 0.8;
 }
 
 window#waybar.empty #window {
-    background-color:transparent;
+  background-color: transparent;
 }
-
-
 
 /*  ____           _
  * / ___|___ _ __ | |_ ___ _ __
@@ -114,44 +109,43 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #workspaces {
-    background: @crust;
-    margin: 2px 1px 3px 1px;
-    padding: 0px 1px;
-    border-radius: 15px;
-    border: 0px;
-    font-weight: bold;
-    font-style: normal;
-    opacity: 0.8;
-    font-size: 16px;
+  background: @crust;
+  margin: 2px 1px 3px 1px;
+  padding: 0px 1px;
+  border-radius: 15px;
+  border: 0px;
+  font-weight: bold;
+  font-style: normal;
+  opacity: 0.8;
+  font-size: 16px;
 }
 
 #workspaces button {
-    padding: 0px 5px;
-    margin: 4px 3px;
-    border-radius: 15px;
-    border: 0px;
-    color: @text;
-    background-color: @base;
-    transition: all 0.3s ease-in-out;
-    opacity: 0.4;
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  color: @text;
+  background-color: @base;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.4;
 }
 
 #workspaces button.active {
-    color: @blue;
-    background: @base;
-    border-radius: 15px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity:1.0;
+  color: @blue;
+  background: @base;
+  border-radius: 15px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
 }
 
 #workspaces button:hover {
-    color: @blue;
-    background: @base;
-    border-radius: 15px;
-    opacity:0.7;
+  color: @blue;
+  background: @base;
+  border-radius: 15px;
+  opacity: 0.7;
 }
-
 
 /*  ____  _       _     _
  * |  _ \(_) __ _| |__ | |_
@@ -166,47 +160,71 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-    background-color: @base;
-    font-size: 16px;
-    color: @red;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
-    opacity:0.8;
+  background-color: @base;
+  font-size: 16px;
+  color: @red;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
 }
 
 #custom-updates.green {
-    background-color: @green;
+  background-color: @green;
 }
 
 #custom-updates.yellow {
-    background-color: @yellow;
-    color: @text;
+  background-color: @yellow;
+  color: @text;
 }
 
 #custom-updates.red {
-    background-color: @red;
-    color: @text;
+  background-color: @red;
+  color: @text;
 }
-
 
 /* -----------------------------------------------------
  * Pulseaudio
  * ----------------------------------------------------- */
 
 #pulseaudio {
-    background-color: @base;
-    font-size: 16px;
-    color: @peach;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
-    opacity:0.8;
+  background-color: @base;
+  font-size: 16px;
+  color: @peach;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
 }
 
 #pulseaudio.muted {
-    background-color: @base;
-    color: @red;
+  background-color: @base;
+  color: @red;
+}
+
+#pulseaudio-slider {
+  background-color: @base;
+  color: @peach;
+  padding: 0;
+  margin: 0;
+  opacity: 0.8;
+}
+
+#pulseaudio-slider slider {
+  opacity: 0;
+}
+
+#pulseaudio-slider trough {
+  min-width: 80px;
+  min-height: 5px;
+  border-radius: 5px;
+  background-color: @crust;
+}
+
+#pulseaudio-slider highlight {
+  min-width: 10px;
+  border-radius: 5px;
+  background-color: @peach;
 }
 
 
@@ -215,98 +233,95 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-    background-color: @base;
-    font-size: 16px;
-    color: @yellow;
-    border-radius: 15px;
-    padding: 2px 10px 0px 10px;
-    margin: 5px 15px 5px 0px;
-    opacity:0.8;
+  background-color: @base;
+  font-size: 16px;
+  color: @yellow;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
 }
 
 #network.ethernet {
-    background-color: @base;
-    color: @yellow;
+  background-color: @base;
+  color: @yellow;
 }
 
 #network.wifi {
-    background-color: @base;
-    color: @yellow;
+  background-color: @base;
+  color: @yellow;
 }
-
 
 /* -----------------------------------------------------
  * Hardware Group
  * ----------------------------------------------------- */
 
-#disk, #memory, #cpu {
-    margin:0px;
-    padding:0px;
-    font-size:16px;
-    color:@green;
+#disk,
+#memory,
+#cpu {
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  color: @green;
 }
 
 #memory {
-    margin-right:10px;
+  margin-right: 10px;
 }
-
 
 /* -----------------------------------------------------
  * Custom system
  * ----------------------------------------------------- */
 
 #custom-system {
-    margin-right: 23px;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0.8;
-    color: @green;
+  margin-right: 23px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.8;
+  color: @green;
 }
 
 #custom-system {
-    margin-right:15px;
+  margin-right: 15px;
 }
-
 
 /* -----------------------------------------------------
  * Tray
  * ----------------------------------------------------- */
 
 #tray {
-    padding: 0px 15px 0px 0px;
+  padding: 0px 15px 0px 0px;
 }
 
 #tray > .passive {
-    -gtk-icon-effect: dim;
+  -gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+  -gtk-icon-effect: highlight;
 }
-
 
 /* -----------------------------------------------------
  * Clock
  * ----------------------------------------------------- */
 
 #clock {
-    background-color: @base;
-    font-size: 16px;
-    color: @lavender;
-    border-radius: 15px;
-    padding: 1px 10px 0px 10px;
-    margin: 3px 15px 3px 0px;
-    opacity:0.8;
+  background-color: @base;
+  font-size: 16px;
+  color: @lavender;
+  border-radius: 15px;
+  padding: 1px 10px 0px 10px;
+  margin: 3px 15px 3px 0px;
+  opacity: 0.8;
 }
-
 
 /* -----------------------------------------------------
  * Custom Exit
  * ----------------------------------------------------- */
 
 #custom-exit {
-    margin: 0px 20px 0px 0px;
-    padding:0px;
-    font-size:20px;
-    color: @text;
+  margin: 0px 20px 0px 0px;
+  padding: 0px;
+  font-size: 20px;
+  color: @text;
 }
