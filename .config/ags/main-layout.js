@@ -5,6 +5,7 @@ import {
   Media,
   Volume,
   NetworkIndicator,
+  UpdateIndicator,
   SysTray,
   Clock,
   BatteryLabel,
@@ -35,5 +36,5 @@ export const MainRight = () =>
   Widget.Box({
     hpack: "end",
     spacing: 8,
-    children: [Media(), Volume(), NetworkIndicator(), SysTray(), Clock(), BatteryLabel()],
+    children: [Media(), Volume(), NetworkIndicator(), UpdateIndicator(), SysTray(), Clock(), BatteryLabel()],
   });

@@ -143,8 +143,8 @@ export const Volume = () =>
         const icon = audio.speaker.is_muted
           ? 0
           : [101, 67, 34, 1, 0].find(
-            (threshold) => threshold <= audio.speaker.volume * 100,
-          );
+              (threshold) => threshold <= audio.speaker.volume * 100,
+            );
 
         self.icon = `audio-volume-${category[icon]}-symbolic`;
       }),
@@ -192,6 +192,17 @@ export const NetworkIndicator = () =>
       ["wired", WiredIndicator()],
     ],
     shown: network.bind("primary").as((p) => p || "wifi"),
+  });
+
+// -------------------------
+// System updates
+// -------------------------
+const updates = Utils.exec('bash -c "checkupdates | wc -l"');
+
+export const UpdateIndicator = () =>
+  Widget.Label({
+    class_name: "updates",
+    label: `  ${updates}`,
   });
 
 // -------------------------

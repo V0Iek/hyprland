@@ -44,11 +44,6 @@ label {
   font-weight: bold;
 }
 
-progress,
-highlight {
-  min-height: 8px;
-}
-
 /*  _          __ _
  * | |    ___ / _| |_
  * | |   / _ \ |_| __|
@@ -62,7 +57,7 @@ highlight {
  * Window
  * ------------------- */
 .client-title {
-  margin: 5px 15px 0px 0px;
+  margin: 5px 15px 5px 0px;
   padding: 0px 10px;
 
   color: @lavender;
@@ -86,7 +81,7 @@ highlight {
  * Workspaces
  * ------------------------------ */
 .workspaces {
-  margin: 2px 1px 3px 1px;
+  margin: 5px 15px 5px 0px;
   padding: 0px 2px;
 
   font-style: normal;
@@ -146,7 +141,7 @@ highlight {
  * Volume
  * ------------------------- */
 .media {
-  margin: 5px 15px 0px 0px;
+  margin: 5px 15px 5px 0px;
   padding: 0px 10px;
 
   color: @green;
@@ -160,7 +155,7 @@ highlight {
  * Volume
  * ------------------------- */
 .volume {
-  margin: 5px 15px 0px 0px;
+  margin: 5px 15px 5px 0px;
   padding: 0px 10px;
   
   color: @peach;
@@ -188,6 +183,8 @@ highlight {
 }
 
 .volume scale highlight {
+  min-height: 4px;
+  
   background-color: @peach;
 
   border-radius: 5px;
@@ -204,6 +201,20 @@ highlight {
   background-color: @base;
   opacity: 0.8;
   
+  border-radius: 20px;
+}
+
+/* -------------------------
+ * System updates
+ * ------------------------- */
+.updates {
+  margin: 5px 15px 5px 0px;
+  padding: 0px 10px;
+
+  color: @red;
+  background-color: @base;
+  opacity: 0.8;
+
   border-radius: 20px;
 }
 
