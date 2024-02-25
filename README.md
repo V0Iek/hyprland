@@ -9,7 +9,7 @@ Ensure you have the following installed on your system
 ### Dependencies
 
 ``` sh 
-yay -S hyprland xdg-desktop-portal-hyprland waybar rofi alacritty hyprpaper dunst polkit-kde-agent wlogout swaylock-effects swayidle grim slurp swappy lf ttf-fira-sans otf-font-awesome spicetify-cli aylurs-gtk-shell cava
+yay -S hyprland xdg-desktop-portal-hyprland waybar rofi alacritty hyprpaper dunst polkit-kde-agent wlogout hyprlock-git hypridle-git grim slurp swappy lf ttf-fira-sans otf-font-awesome spicetify-cli aylurs-gtk-shell cava
 ```
 
 ### Git
