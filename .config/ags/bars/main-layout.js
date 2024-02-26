@@ -1,15 +1,12 @@
-import {
-  ClientTitle,
-  Workspaces,
-  Media,
-  Volume,
-  NetworkIndicator,
-  UpdateIndicator,
-  SysTray,
-  Clock,
-  BatteryLabel,
-  PowerMenu,
-} from "./widgets.js";
+import { ClientTitle } from "./widgets/window-title.js";
+import { Workspaces } from "./widgets/workspaces.js";
+import { Media } from "./widgets/media.js";
+import { Volume } from "./widgets/volume.js";
+import { NetworkIndicator } from "./widgets/network.js";
+import { UpdateIndicator } from "./widgets/system-updates.js";
+import { SysTray } from "./widgets/tray.js";
+import { Clock } from "./widgets/clock.js";
+import { PowerMenu } from "./widgets/power-menu.js";
 
 //  _                            _
 // | |    __ _ _   _  ___  _   _| |_
@@ -43,7 +40,6 @@ export const MainRight = () =>
       UpdateIndicator(),
       SysTray(),
       Clock(),
-      BatteryLabel(),
       PowerMenu(),
     ],
   });

@@ -1,5 +1,6 @@
 export default () =>
   Widget.Box({
+    hpack: "end",
     class_name: "powerbuttons",
     children: [
       Widget.Button({

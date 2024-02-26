@@ -341,6 +341,7 @@ window#notifications box.notifications {
 }
 
 .powerbuttons button {
+  margin: 0;
   margin-left: 10px;
   padding: 10px;
 

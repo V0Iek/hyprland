@@ -13,7 +13,10 @@ export const PowerMenu = () =>
       vertical: true,
       children: [
         Widget.CenterBox({
-          start_widget: Widget.Label({ label: Utils.exec(`bash -c "echo Hello $USER"`) }),
+          start_widget: Widget.Label({
+            hpack: "start",
+            label: Utils.exec(`bash -c "echo Hello $USER"`),
+          }),
           end_widget: PowerButtons(),
         }),
         Media(),
