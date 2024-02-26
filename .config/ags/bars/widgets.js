@@ -150,7 +150,7 @@ const WifiIndicator = () =>
     class_name: "network",
     children: [
       Widget.Icon({
-        icon: network.wifi.bind("icon_name"),
+        icon: network.wifi.bind("network-wireless"),
       }),
       Widget.Label({
         label: network.wifi.bind("ssid").as((ssid) => ssid || "Unknown"),
@@ -161,7 +161,7 @@ const WifiIndicator = () =>
 const WiredIndicator = () =>
   Widget.Icon({
     class_name: "network",
-    icon: network.wired.bind("icon_name"),
+    icon: network.wired.bind("network-wired"),
   });
 
 export const NetworkIndicator = () =>
@@ -223,12 +223,24 @@ export function Notification() {
       Widget.Icon({
         icon: "preferences-system-notifications-symbolic",
       }),
-      Widget.Label({
-        label: popups.as((p) => p[0]?.summary || ""),
-      }),
+      //Widget.Label({
+      //  label: popups.as((p) => p[0]?.summary || ""),
+      //}),
     ],
   });
 }
+
+// -------------------------
+// Power menu
+// -------------------------
+export const PowerMenu = () =>
+  Widget.Box({
+    class_name: "powermenu_button",
+    child: Widget.Button({
+      child: Widget.Label("Menu"),
+      on_primary_click: () => Utils.execAsync("ags -t PowerMenu"),
+    }),
+  });
 
 // -------------------------
 // Battery

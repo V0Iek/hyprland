@@ -133,11 +133,11 @@ label {
 .volume {
   margin: 5px 15px 5px 0px;
   padding: 0px 10px;
-  
+
   color: @peach;
   background-color: @base;
   opacity: 0.8;
-  
+
   border-radius: 20px;
 }
 
@@ -162,7 +162,7 @@ label {
 
 .volume scale highlight {
   min-height: 4px;
-  
+
   background-color: @peach;
 
   border-radius: 5px;
@@ -174,11 +174,11 @@ label {
 .network {
   margin: 5px 15px 5px 0px;
   padding: 0px 10px;
-  
+
   color: @yellow;
   background-color: @base;
   opacity: 0.8;
-  
+
   border-radius: 20px;
 }
 
@@ -190,21 +190,6 @@ label {
   padding: 0px 10px;
 
   color: @red;
-  background-color: @base;
-  opacity: 0.8;
-
-  border-radius: 20px;
-}
-
-/* -------------------------
- * Clock
- * ------------------------- */
-.clock {
-  margin: 5px 15px 3px 0px;
-  padding: 0px 10px;
-  font-size: 16px;
-
-  color: @lavender;
   background-color: @base;
   opacity: 0.8;
 
@@ -225,9 +210,170 @@ label {
   border-radius: 20px;
 }
 
+/* -------------------------
+ * Clock
+ * ------------------------- */
+.clock {
+  margin: 5px 15px 3px 0px;
+  padding: 0px 10px;
+  font-size: 16px;
+
+  color: @lavender;
+  background-color: @base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+}
+
+/* ------------------------------
+ * Power menu
+ * ------------------------------ */
+.powermenu_button button {
+  margin: 5px 15px 3px 0px;
+  padding: 0px 10px;
+  font-size: 16px;
+
+  color: @text;
+  background-color: @base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+}
+
 /* ------------------------------
  * Notifications
  * ------------------------------ */
 .notification {
   color: @yellow;
+}
+
+/*  _   _       _   _  __ _           _   _
+ * | \ | | ___ | |_(_)/ _(_) ___ __ _| |_(_) ___  _ __  ___
+ * |  \| |/ _ \| __| | |_| |/ __/ _` | __| |/ _ \| '_ \/ __|
+ * | |\  | (_) | |_| |  _| | (_| (_| | |_| | (_) | | | \__ \
+ * |_| \_|\___/ \__|_|_| |_|\___\__,_|\__|_|\___/|_| |_|___/
+ *
+ * ---------------------------------------------------------
+*/
+window#notifications {
+  all: unset;
+}
+
+window#notifications box.notifications {
+  padding: 0.5em;
+}
+
+.icon {
+  min-width: 68px;
+  min-height: 68px;
+  margin-right: 1em;
+}
+
+.icon image {
+  font-size: 58px;
+  /* to center the icon */
+  margin: 5px;
+  color: @text;
+}
+
+.icon box {
+  min-width: 68px;
+  min-height: 68px;
+  border-radius: 7px;
+}
+
+.notification {
+  min-width: 350px;
+  border-radius: 11px;
+  padding: 1em;
+  margin: 0.5em;
+  border: 1px solid @blue;
+  background-color: @base;
+}
+
+.notification.critical {
+  border: 1px solid lightcoral;
+}
+
+.title {
+  color: @text;
+  font-size: 1.4em;
+}
+
+.body {
+  color: @base;
+}
+
+.actions .action-button {
+  margin: 0 0.4em;
+  margin-top: 0.8em;
+}
+
+.actions .action-button:first-child {
+  margin-left: 0;
+}
+
+.actions .action-button:last-child {
+  margin-right: 0;
+}
+
+/*  __  __          _ _
+ * |  \/  | ___  __| (_) __ _
+ * | |\/| |/ _ \/ _` | |/ _` |
+ * | |  | |  __/ (_| | | (_| |
+ * |_|  |_|\___|\__,_|_|\__,_|
+ *
+ * ---------------------------
+*/
+.player {
+  padding: 10px;
+  min-width: 350px;
+}
+
+.player .img {
+  min-width: 100px;
+  min-height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 13px;
+  margin-right: 1em;
+}
+
+.player .title {
+  font-size: 1.2em;
+}
+
+.player .artist {
+  font-size: 1.1em;
+  color: @insensitive_fg_color;
+}
+
+.player scale.position {
+  padding: 0;
+  margin-bottom: 0.3em;
+}
+
+.player scale.position trough {
+  min-height: 8px;
+
+  border-radius: 5px;
+}
+
+.player scale.position highlight {
+  background-color: @theme_fg_color;
+  border-radius: 5px;
+}
+
+.player scale.position slider {
+  all: unset;
+}
+
+.player button {
+  min-height: 1em;
+  min-width: 1em;
+  padding: 0.3em;
+}
+
+.player button.play-pause {
+  margin: 0 0.3em;
 }

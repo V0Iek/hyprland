@@ -1,4 +1,4 @@
-import { ClientTitle, Workspaces, Clock, Notification } from "./widgets.js";
+import { ClientTitle, Workspaces, Clock, Notification, PowerMenu } from "./widgets.js";
 
 //  _                            _
 // | |    __ _ _   _  ___  _   _| |_
@@ -25,5 +25,5 @@ export const SecondRight = () =>
   Widget.Box({
     hpack: "end",
     spacing: 8,
-    children: [Clock(), Notification()],
+    children: [Clock(), Notification(), PowerMenu()],
   });

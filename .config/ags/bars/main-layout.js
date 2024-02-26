@@ -1,7 +1,6 @@
 import {
   ClientTitle,
   Workspaces,
-  Notification,
   Media,
   Volume,
   NetworkIndicator,
@@ -9,6 +8,7 @@ import {
   SysTray,
   Clock,
   BatteryLabel,
+  PowerMenu,
 } from "./widgets.js";
 
 //  _                            _
@@ -36,5 +36,14 @@ export const MainRight = () =>
   Widget.Box({
     hpack: "end",
     spacing: 8,
-    children: [Media(), Volume(), NetworkIndicator(), UpdateIndicator(), SysTray(), Clock(), Notification(), BatteryLabel()],
+    children: [
+      Media(),
+      Volume(),
+      NetworkIndicator(),
+      UpdateIndicator(),
+      SysTray(),
+      Clock(),
+      BatteryLabel(),
+      PowerMenu(),
+    ],
   });
