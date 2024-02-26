@@ -317,17 +317,52 @@ window#notifications box.notifications {
   margin-right: 0;
 }
 
-/*  __  __          _ _
- * |  \/  | ___  __| (_) __ _
- * | |\/| |/ _ \/ _` | |/ _` |
- * | |  | |  __/ (_| | | (_| |
- * |_|  |_|\___|\__,_|_|\__,_|
+/*  ____                          __  __
+ * |  _ \ _____      _____ _ __  |  \/  | ___ _ __  _   _
+ * | |_) / _ \ \ /\ / / _ \ '__| | |\/| |/ _ \ '_ \| | | |
+ * |  __/ (_) \ V  V /  __/ |    | |  | |  __/ | | | |_| |
+ * |_|   \___/ \_/\_/ \___|_|    |_|  |_|\___|_| |_|\__,_|
  *
- * ---------------------------
+ * -------------------------------------------------------
 */
-.player {
+
+.powermenu {
+  background-color: @base;
+
+  border-radius: 15px;
+}
+
+.powermenu-box {
   padding: 10px;
+}
+
+.powerbuttons {
+  margin-bottom: 10px;
+}
+
+.powerbuttons button {
+  margin-left: 10px;
+  padding: 10px;
+
+  font-size: 28px;
+
+  color: @text;
+  background-color: @surface0;
+
+  border-radius: 40px;
+}
+
+/* -------------------------------------------------------
+ * Media
+ * ------------------------------------------------------- */
+.player {
   min-width: 350px;
+  
+  padding: 10px;
+
+  background-color: @surface0;
+
+  border-radius: 15px;
 }
 
 .player .img {

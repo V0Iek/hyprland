@@ -150,7 +150,7 @@ const WifiIndicator = () =>
     class_name: "network",
     children: [
       Widget.Icon({
-        icon: network.wifi.bind("network-wireless"),
+        icon: network.wifi.bind("icon-name"),
       }),
       Widget.Label({
         label: network.wifi.bind("ssid").as((ssid) => ssid || "Unknown"),
@@ -161,7 +161,7 @@ const WifiIndicator = () =>
 const WiredIndicator = () =>
   Widget.Icon({
     class_name: "network",
-    icon: network.wired.bind("network-wired"),
+    icon: network.wired.bind("icon-name"),
   });
 
 export const NetworkIndicator = () =>
@@ -237,7 +237,7 @@ export const PowerMenu = () =>
   Widget.Box({
     class_name: "powermenu_button",
     child: Widget.Button({
-      child: Widget.Label("Menu"),
+      child: Widget.Icon("system-shutdown-symbolic"),
       on_primary_click: () => Utils.execAsync("ags -t PowerMenu"),
     }),
   });
