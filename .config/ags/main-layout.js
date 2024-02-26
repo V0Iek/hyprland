@@ -29,12 +29,12 @@ export const MainLeft = () =>
 export const MainCenter = () =>
   Widget.Box({
     spacing: 8,
-    children: [Workspaces(), Notification()],
+    children: [Workspaces()],
   });
 
 export const MainRight = () =>
   Widget.Box({
     hpack: "end",
     spacing: 8,
-    children: [Media(), Volume(), NetworkIndicator(), UpdateIndicator(), SysTray(), Clock(), BatteryLabel()],
+    children: [Media(), Volume(), NetworkIndicator(), UpdateIndicator(), SysTray(), Clock(), Notification(), BatteryLabel()],
   });

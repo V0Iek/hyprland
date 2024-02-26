@@ -1,4 +1,5 @@
 import { MainLeft, MainCenter, MainRight } from "./main-layout.js";
+import { SecondLeft, SecondCenter, SecondRight } from "./second-layout.js";
 
 //  ____
 // | __ )  __ _ _ __ ___
@@ -8,6 +9,9 @@ import { MainLeft, MainCenter, MainRight } from "./main-layout.js";
 //
 // ----------------------
 
+// ----------------------
+// Main monitor bar
+// ----------------------
 const MainBar = (monitor = 0) =>
   Widget.Window({
     name: `bar-${monitor}`,
@@ -22,8 +26,9 @@ const MainBar = (monitor = 0) =>
     }),
   });
 
-import { SecondLeft, SecondCenter, SecondRight } from "./second-layout.js"
-
+// ----------------------
+// Second monitor bar
+// ----------------------
 const SecondBar = (monitor = 1) =>
   Widget.Window({
     name: `bar-${monitor}`,

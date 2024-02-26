@@ -23,23 +23,6 @@ window.bar {
   color: @text;
 }
 
-button {
-  min-width: 0;
-
-  padding-top: 0;
-
-  padding-bottom: 0;
-  background-color: transparent;
-}
-
-button:active {
-  background-color: @base;
-}
-
-button:hover {
-  border-bottom: 3px solid @base;
-}
-
 label {
   font-weight: bold;
 }
@@ -57,7 +40,7 @@ label {
  * Window
  * ------------------- */
 .client-title {
-  margin: 5px 15px 5px 0px;
+  margin: 5px 15px 5px 15px;
   padding: 0px 10px;
 
   color: @lavender;
@@ -121,13 +104,6 @@ label {
   transition: all 0.3s ease-in-out;
 }
 
-/* ------------------------------
- * Notifications
- * ------------------------------ */
-.notification {
-  color: @yellow;
-}
-
 /*  ____  _       _     _
  * |  _ \(_) __ _| |__ | |_
  * | |_) | |/ _` | '_ \| __|
@@ -144,7 +120,7 @@ label {
   margin: 5px 15px 5px 0px;
   padding: 0px 10px;
 
-  color: @green;
+  color: @text;
   background-color: @base;
   opacity: 0.8;
 
@@ -166,6 +142,8 @@ label {
 }
 
 .volume scale {
+  min-width: 100px;
+
   margin: 0 10px;
   padding: 0;
 
@@ -231,4 +209,25 @@ label {
   opacity: 0.8;
 
   border-radius: 20px;
+}
+
+/* -------------------------
+ * System tray
+ * ------------------------- */
+.systray {
+  margin: 5px 15px 5px 0px;
+  padding: 0px;
+}
+
+.systray button {
+  background-color: transparent;
+
+  border-radius: 20px;
+}
+
+/* ------------------------------
+ * Notifications
+ * ------------------------------ */
+.notification {
+  color: @yellow;
 }

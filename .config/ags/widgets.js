@@ -72,25 +72,6 @@ export function Workspaces() {
   });
 }
 
-// ------------------------------
-// Notifications
-// ------------------------------
-export function Notification() {
-  const popups = notifications.bind("popups");
-  return Widget.Box({
-    class_name: "notification",
-    visible: popups.as((p) => p.length > 0),
-    children: [
-      Widget.Icon({
-        icon: "preferences-system-notifications-symbolic",
-      }),
-      Widget.Label({
-        label: popups.as((p) => p[0]?.summary || ""),
-      }),
-    ],
-  });
-}
-
 //  ____  _       _     _
 // |  _ \(_) __ _| |__ | |_
 // | |_) | |/ _` | '_ \| __|
@@ -114,7 +95,8 @@ export const Media = () =>
       (self) => {
         if (mpris.players[0]) {
           const { track_artists, track_title } = mpris.players[0];
-          self.label = `${track_artists.join(", ")} - ${track_title}`;
+          //self.label = `${track_artists.join(", ")} - ${track_title}`;
+          self.label = track_title;
         } else {
           self.label = "Nothing is playing";
         }
@@ -129,7 +111,6 @@ export const Media = () =>
 export const Volume = () =>
   Widget.Box({
     class_name: "volume",
-    css: "min-width: 180px",
     children: [
       Widget.Icon().hook(audio.speaker, (self) => {
         const category = {
@@ -143,14 +124,12 @@ export const Volume = () =>
         const icon = audio.speaker.is_muted
           ? 0
           : [101, 67, 34, 1, 0].find(
-              (threshold) => threshold <= audio.speaker.volume * 100,
-            );
+            (threshold) => threshold <= audio.speaker.volume * 100,
+          );
 
         self.icon = `audio-volume-${category[icon]}-symbolic`;
       }),
-      Widget.Label({
-        label: audio.speaker.volume * 100,
-      }),
+      Widget.Label({ label: audio.speaker.volume * 100 }),
       Widget.Slider({
         hexpand: true,
         draw_value: false,
@@ -188,7 +167,7 @@ const WiredIndicator = () =>
 export const NetworkIndicator = () =>
   Widget.Stack({
     items: [
-      ["wifi", WifiIndicator()],
+      //["wifi", WifiIndicator()],
       ["wired", WiredIndicator()],
     ],
     shown: network.bind("primary").as((p) => p || "wifi"),
@@ -210,6 +189,7 @@ export const UpdateIndicator = () =>
 // -------------------------
 export const SysTray = () =>
   Widget.Box({
+    class_name: "systray",
     children: systemtray.bind("items").as((items) =>
       items.map((item) =>
         Widget.Button({
@@ -230,6 +210,25 @@ export const Clock = () =>
     class_name: "clock",
     label: date.bind(),
   });
+
+// ------------------------------
+// Notifications
+// ------------------------------
+export function Notification() {
+  const popups = notifications.bind("popups");
+  return Widget.Box({
+    class_name: "notification",
+    visible: popups.as((p) => p.length > 0),
+    children: [
+      Widget.Icon({
+        icon: "preferences-system-notifications-symbolic",
+      }),
+      Widget.Label({
+        label: popups.as((p) => p[0]?.summary || ""),
+      }),
+    ],
+  });
+}
 
 // -------------------------
 // Battery
