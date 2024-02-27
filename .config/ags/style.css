@@ -182,6 +182,10 @@ label {
   border-radius: 20px;
 }
 
+.network label {
+  margin-left: 15px;
+}
+
 /* -------------------------
  * System updates
  * ------------------------- */

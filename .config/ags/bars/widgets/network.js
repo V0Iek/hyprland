@@ -14,16 +14,21 @@ const WifiIndicator = () =>
   });
 
 const WiredIndicator = () =>
-  Widget.Icon({
+  Widget.Box({
     class_name: "network",
-    icon: network.wired.bind("icon-name"),
+    children: [
+      Widget.Icon({
+        icon: network.wired.bind("icon-name"),
+      }),
+      Widget.Label("Wired"),
+    ],
   });
 
 export const NetworkIndicator = () =>
   Widget.Stack({
-    items: [
-      //["wifi", WifiIndicator()],
-      ["wired", WiredIndicator()],
-    ],
+    children: {
+      wifi: WifiIndicator(),
+      wired: WiredIndicator(),
+    },
     shown: network.bind("primary").as((p) => p || "wifi"),
   });
