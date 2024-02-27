@@ -1,5 +1,7 @@
-import Media from "./widgets/media.js";
 import PowerButtons from "./widgets/powerbuttons.js";
+import { Sliders } from "./widgets/sliders.js";
+import { Buttons } from "./widgets/buttons/buttons.js";
+import Media from "./widgets/media.js";
 
 export const PowerMenu = () =>
   Widget.Window({
@@ -14,11 +16,14 @@ export const PowerMenu = () =>
       children: [
         Widget.CenterBox({
           start_widget: Widget.Label({
+            class_name: "greet",
             hpack: "start",
-            label: Utils.exec(`bash -c "echo Hello $USER"`),
+            label: Utils.exec(`bash -c "echo Hello, $USER!"`),
           }),
           end_widget: PowerButtons(),
         }),
+        Sliders(),
+        Buttons(),
         Media(),
       ],
     }),

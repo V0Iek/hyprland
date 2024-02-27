@@ -114,7 +114,7 @@ label {
 */
 
 /* -------------------------
- * Volume
+ * Media
  * ------------------------- */
 .media {
   margin: 5px 15px 5px 0px;
@@ -151,7 +151,7 @@ label {
 }
 
 .volume scale slider {
-  opacity: 0;
+  all: unset;
 }
 
 .volume scale trough {
@@ -161,9 +161,9 @@ label {
 }
 
 .volume scale highlight {
-  min-height: 4px;
+  min-height: 8px;
 
-  background-color: @peach;
+  background-image: linear-gradient(@peach, @peach);
 
   border-radius: 5px;
 }
@@ -336,6 +336,12 @@ window#notifications box.notifications {
   padding: 10px;
 }
 
+.greet {
+  font-size: 20px;
+
+  color: @text;
+}
+
 .powerbuttons {
   margin-bottom: 10px;
 }
@@ -351,6 +357,53 @@ window#notifications box.notifications {
   background-color: @surface0;
 
   border-radius: 40px;
+}
+
+
+/* -------------------------------------------------------
+ * Sliders
+ * ------------------------------------------------------- */
+.sliders {
+  margin-bottom: 10px;
+
+  background-color: @surface0;
+
+  border-radius: 15px;
+}
+
+.sliders .volume {
+  font-size: 20px;
+
+  color: @text;
+  background-color: @surface0;
+  opacity: 1;
+}
+
+.sliders .volume scale highlight {
+  min-height: 10px;
+
+  background-image: linear-gradient(to right, @blue, @lavender);
+
+  border-radius: 5px;
+}
+
+/* -------------------------------------------------------
+ * Buttons
+ * ------------------------------------------------------- */
+.buttons .network {
+  padding: 10px;
+
+  font-size: 16px;
+
+  color: @text;
+  background-color: @surface0;
+  opacity: 1;
+
+  border-radius: 15px;
+}
+
+.buttons label {
+  margin-left: 15px;
 }
 
 /* -------------------------------------------------------
