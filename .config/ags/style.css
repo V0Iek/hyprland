@@ -354,6 +354,40 @@ window#notifications box.notifications {
 }
 
 /* -------------------------------------------------------
+ * Popups
+ * ------------------------------------------------------- */
+.power-popup {
+  font-size: 20px;
+
+  color: @text;
+  background-color: @base;
+
+  border-radius: 15px;
+}
+
+.power-popup-box {
+  padding: 20px;
+}
+
+.power-popup-box > label {
+  padding-bottom: 20px;
+}
+
+.power-popup-box button {
+  color: @text;
+  background-color: @surface0;
+
+  border-radius: 10px;
+}
+
+.power-popup-box button:first-child {
+  margin-right: 10px;
+}
+.power-popup-box button:last-child {
+  margin-left: 10px;
+}
+
+/* -------------------------------------------------------
  * Media
  * ------------------------------------------------------- */
 .player {
