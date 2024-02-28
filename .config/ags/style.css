@@ -128,65 +128,6 @@ label {
 }
 
 /* -------------------------
- * Volume
- * ------------------------- */
-.volume {
-  margin: 5px 15px 5px 0px;
-  padding: 0px 10px;
-
-  color: @peach;
-  background-color: @base;
-  opacity: 0.8;
-
-  border-radius: 20px;
-}
-
-.volume scale {
-  min-width: 100px;
-
-  margin: 0 10px;
-  padding: 0;
-
-  opacity: 0.8;
-}
-
-.volume scale slider {
-  all: unset;
-}
-
-.volume scale trough {
-  background-color: @crust;
-
-  border-radius: 5px;
-}
-
-.volume scale highlight {
-  min-height: 8px;
-
-  background-image: linear-gradient(@peach, @peach);
-
-  border-radius: 5px;
-}
-
-/* -------------------------
- * Network
- * ------------------------- */
-.network {
-  margin: 5px 15px 5px 0px;
-  padding: 0px 10px;
-
-  color: @yellow;
-  background-color: @base;
-  opacity: 0.8;
-
-  border-radius: 20px;
-}
-
-.network label {
-  margin-left: 15px;
-}
-
-/* -------------------------
  * System updates
  * ------------------------- */
 .updates {
@@ -232,8 +173,8 @@ label {
 /* ------------------------------
  * Power menu
  * ------------------------------ */
-.powermenu_button button {
-  margin: 5px 15px 3px 0px;
+.powermenu_button {
+  margin: 5px 15px 5px 0px;
   padding: 0px 10px;
   font-size: 16px;
 
@@ -244,11 +185,12 @@ label {
   border-radius: 20px;
 }
 
-/* ------------------------------
- * Notifications
- * ------------------------------ */
-.notification {
-  color: @yellow;
+.powermenu_button image {
+  margin-left: 10px;
+}
+
+.powermenu_button image:first-child {
+  margin-left: 0;
 }
 
 /*  _   _       _   _  __ _           _   _
@@ -376,11 +318,29 @@ window#notifications box.notifications {
 }
 
 .sliders .volume {
+  margin: 5px 10px;
+
   font-size: 20px;
 
   color: @text;
   background-color: @surface0;
-  opacity: 1;
+}
+
+.sliders .volume scale {
+  min-width: 100px;
+
+  margin: 0 10px;
+  padding: 0;
+}
+
+.sliders .volume scale slider {
+  all: unset;
+}
+
+.sliders .volume scale trough {
+  background-color: @crust;
+
+  border-radius: 5px;
 }
 
 .sliders .volume scale highlight {
@@ -394,6 +354,10 @@ window#notifications box.notifications {
 /* -------------------------------------------------------
  * Buttons
  * ------------------------------------------------------- */
+.buttons {
+  margin-bottom: 10px;
+}
+
 .buttons .network {
   padding: 10px;
 

@@ -1,8 +1,15 @@
+import { Volume } from "./volume.js";
+import { NetworkIndicator } from "./network.js";
+
 export const PowerMenu = () =>
-  Widget.Box({
+  Widget.Button({
     class_name: "powermenu_button",
-    child: Widget.Button({
-      child: Widget.Icon("system-shutdown-symbolic"),
-      on_primary_click: () => Utils.execAsync("ags -t PowerMenu"),
+    on_primary_click: () => Utils.execAsync("ags -t PowerMenu"),
+    child: Widget.Box({
+      children: [
+        Volume(),
+        NetworkIndicator(),
+        Widget.Icon("system-shutdown-symbolic")
+      ],
     }),
   });

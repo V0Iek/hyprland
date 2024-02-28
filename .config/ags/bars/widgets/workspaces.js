@@ -1,18 +1,32 @@
 const hyprland = await Service.import("hyprland");
 
+const dispatch = (ws) => hyprland.messageAsync(`dispatch workspace ${ws}`);
+
 export function Workspaces() {
-  const workspaces = hyprland.bind("workspaces");
   const activeId = hyprland.active.workspace.bind("id");
-  return Widget.Box({
-    class_name: "workspaces",
-    children: workspaces.as((ws) =>
-      ws.map(({ id }) =>
+
+  return Widget.EventBox({
+    onScrollUp: () => dispatch("+1"),
+    onScrollDown: () => dispatch("-1"),
+    child: Widget.Box({
+      class_name: "workspaces",
+      children: Array.from({ length: 10 }, (_, i) => i + 1).map((i) =>
         Widget.Button({
-          on_clicked: () => hyprland.messageAsync(`dispatch workspace ${id}`),
-          child: Widget.Label(`${id}`),
-          class_name: activeId.as((i) => `${i === id ? "focused" : ""}`),
+          class_name: activeId.as((id) => `${i === id ? "focused" : ""}`),
+          attribute: i,
+          label: `${i}`,
+          onClicked: () => dispatch(i),
         }),
       ),
-    ),
+
+      setup: (self) =>
+        self.hook(hyprland, () =>
+          self.children.forEach((btn) => {
+            btn.visible = hyprland.workspaces.some(
+              (ws) => ws.id === btn.attribute,
+            );
+          }),
+        ),
+    }),
   });
 }

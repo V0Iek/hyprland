@@ -1,27 +1,13 @@
 const network = await Service.import("network");
 
 const WifiIndicator = () =>
-  Widget.Box({
-    class_name: "network",
-    children: [
-      Widget.Icon({
-        icon: network.wifi.bind("icon-name"),
-      }),
-      Widget.Label({
-        label: network.wifi.bind("ssid").as((ssid) => ssid || "Unknown"),
-      }),
-    ],
+  Widget.Icon({
+    icon: network.wifi.bind("icon-name"),
   });
 
 const WiredIndicator = () =>
-  Widget.Box({
-    class_name: "network",
-    children: [
-      Widget.Icon({
-        icon: network.wired.bind("icon-name"),
-      }),
-      Widget.Label("Wired"),
-    ],
+  Widget.Icon({
+    icon: network.wired.bind("icon-name"),
   });
 
 export const NetworkIndicator = () =>
