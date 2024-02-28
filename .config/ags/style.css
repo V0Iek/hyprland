@@ -358,6 +358,13 @@ window#notifications box.notifications {
   margin-bottom: 10px;
 }
 
+.buttons label {
+  margin-left: 15px;
+}
+
+/* -------------------------------------------------------
+ * Network button
+ * ------------------------------------------------------- */
 .buttons .network {
   padding: 10px;
 
@@ -370,8 +377,9 @@ window#notifications box.notifications {
   border-radius: 15px;
 }
 
-.buttons label {
-  margin-left: 15px;
+.buttons .connected {
+  color: @base;
+  background-image: linear-gradient(to right, @blue, @lavender);
 }
 
 /* -------------------------------------------------------
