@@ -13,7 +13,7 @@ function WifiIndicator() {
     ],
   });
 
-  if (network.wifi.bind("ssid").as((ssid) => ssid || "Unknown") === "Unknown") {
+  if (network.connectivity == "none") {
     wifi.toggleClassName("connected", false);
   } else {
     wifi.toggleClassName("connected", true);
