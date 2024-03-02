@@ -11,7 +11,7 @@
 /* ---------------------------------------------
  * Import colorscheme
  * --------------------------------------------- */
-@import "mocha.css";
+@import "mocha";
 
 /* ---------------------------------------------
  * General
@@ -19,8 +19,8 @@
 window.bar {
   font-size: 16px;
 
+  color: $text;
   background-color: transparent;
-  color: @text;
 }
 
 label {
@@ -43,8 +43,8 @@ label {
   margin: 5px 15px 5px 15px;
   padding: 0px 10px;
 
-  color: @lavender;
-  background: @base;
+  color: $lavender;
+  background: $base;
 
   border-radius: 20px;
 
@@ -70,7 +70,7 @@ label {
   font-style: normal;
   font-weight: bold;
 
-  background-color: @base;
+  background-color: $base;
   opacity: 0.8;
 
   border-radius: 20px;
@@ -83,7 +83,7 @@ label {
   margin: 3px 4px;
   padding: 0px 5px;
 
-  background-color: @crust;
+  background-color: $crust;
   opacity: 0.4;
 
   border: 0px;
@@ -95,8 +95,8 @@ label {
 .workspaces button.focused {
   min-width: 40px;
 
-  color: @blue;
-  background-color: @crust;
+  color: $blue;
+  background-color: $crust;
   opacity: 1;
 
   border-radius: 20px;
@@ -120,8 +120,8 @@ label {
   margin: 5px 15px 5px 0px;
   padding: 0px 10px;
 
-  color: @text;
-  background-color: @base;
+  color: $text;
+  background-color: $base;
   opacity: 0.8;
 
   border-radius: 20px;
@@ -134,8 +134,8 @@ label {
   margin: 5px 15px 5px 0px;
   padding: 0px 10px;
 
-  color: @red;
-  background-color: @base;
+  color: $red;
+  background-color: $base;
   opacity: 0.8;
 
   border-radius: 20px;
@@ -163,8 +163,8 @@ label {
   padding: 0px 10px;
   font-size: 16px;
 
-  color: @lavender;
-  background-color: @base;
+  color: $lavender;
+  background-color: $base;
   opacity: 0.8;
 
   border-radius: 20px;
@@ -178,8 +178,8 @@ label {
   padding: 0px 10px;
   font-size: 16px;
 
-  color: @text;
-  background-color: @base;
+  color: $text;
+  background-color: $base;
   opacity: 0.8;
 
   border-radius: 20px;
@@ -219,7 +219,7 @@ window#notifications box.notifications {
   font-size: 58px;
   /* to center the icon */
   margin: 5px;
-  color: @text;
+  color: $text;
 }
 
 .icon box {
@@ -233,8 +233,8 @@ window#notifications box.notifications {
   border-radius: 11px;
   padding: 1em;
   margin: 0.5em;
-  border: 1px solid @blue;
-  background-color: @base;
+  border: 1px solid $blue;
+  background-color: $base;
 }
 
 .notification.critical {
@@ -242,12 +242,12 @@ window#notifications box.notifications {
 }
 
 .title {
-  color: @text;
+  color: $text;
   font-size: 1.4em;
 }
 
 .body {
-  color: @base;
+  color: $base;
 }
 
 .actions .action-button {
@@ -273,9 +273,9 @@ window#notifications box.notifications {
 */
 
 .powermenu {
-  background-color: @base;
+  background-color: $base;
 
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .powermenu-box {
@@ -285,7 +285,7 @@ window#notifications box.notifications {
 .greet {
   font-size: 20px;
 
-  color: @text;
+  color: $text;
 }
 
 .powerbuttons {
@@ -299,8 +299,8 @@ window#notifications box.notifications {
 
   font-size: 28px;
 
-  color: @text;
-  background-color: @surface0;
+  color: $text;
+  background-color: $surface0;
 
   border-radius: 40px;
 }
@@ -312,7 +312,7 @@ window#notifications box.notifications {
 .sliders {
   margin-bottom: 10px;
 
-  background-color: @surface0;
+  background-color: $surface0;
 
   border-radius: 15px;
 }
@@ -322,8 +322,8 @@ window#notifications box.notifications {
 
   font-size: 20px;
 
-  color: @text;
-  background-color: @surface0;
+  color: $text;
+  background-color: $surface0;
 }
 
 .sliders .volume scale {
@@ -338,7 +338,7 @@ window#notifications box.notifications {
 }
 
 .sliders .volume scale trough {
-  background-color: @crust;
+  background-color: $crust;
 
   border-radius: 5px;
 }
@@ -346,9 +346,15 @@ window#notifications box.notifications {
 .sliders .volume scale highlight {
   min-height: 10px;
 
-  background-image: linear-gradient(to right, @blue, @lavender);
+  background-image: linear-gradient(to right, $blue, $lavender);
 
   border-radius: 5px;
+}
+
+.sliders .volume button {
+  background-color: transparent;
+
+  border-radius: 30px;
 }
 
 /* -------------------------------------------------------
@@ -356,6 +362,25 @@ window#notifications box.notifications {
  * ------------------------------------------------------- */
 .buttons {
   margin-bottom: 10px;
+}
+
+.buttons > box > box {
+  padding: 10px;
+
+  font-size: 16px;
+
+  color: $text;
+  background-color: $surface0;
+
+  border-radius: 15px;
+}
+
+.buttons > box > box:first-child {
+  margin-right: 10px;
+}
+
+.buttons > box > box:last-child {
+  margin-left: 10px;
 }
 
 .buttons label {
@@ -370,16 +395,23 @@ window#notifications box.notifications {
 
   font-size: 16px;
 
-  color: @text;
-  background-color: @surface0;
-  opacity: 1;
+  color: $text;
+  background-color: $surface0;
 
   border-radius: 15px;
 }
 
 .buttons .connected {
-  color: @base;
-  background-image: linear-gradient(to right, @blue, @lavender);
+  color: $base;
+  background-image: linear-gradient(to right, $blue, $lavender);
+}
+
+/* -------------------------------------------------------
+ * Network button
+ * ------------------------------------------------------- */
+.buttons .unmuted {
+  color: $base;
+  background-image: linear-gradient(to right, $blue, $lavender);
 }
 
 /* -------------------------------------------------------
@@ -388,8 +420,8 @@ window#notifications box.notifications {
 .power-popup {
   font-size: 20px;
 
-  color: @text;
-  background-color: @base;
+  color: $text;
+  background-color: $base;
 
   border-radius: 15px;
 }
@@ -403,8 +435,8 @@ window#notifications box.notifications {
 }
 
 .power-popup-box button {
-  color: @text;
-  background-color: @surface0;
+  color: $text;
+  background-color: $surface0;
 
   border-radius: 10px;
 }
@@ -419,12 +451,85 @@ window#notifications box.notifications {
 /* -------------------------------------------------------
  * Media
  * ------------------------------------------------------- */
+.power-player {
+  min-width: 350px;
+  
+  padding: 10px;
+
+  background-color: $surface0;
+
+  border-radius: 15px;
+}
+
+.power-player .img {
+  min-width: 100px;
+  min-height: 100px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 13px;
+  margin-right: 1em;
+}
+
+.power-player .title {
+  font-size: 1.2em;
+}
+
+.power-player .artist {
+  font-size: 1.1em;
+  color: $text;
+}
+
+.power-player scale.position {
+  padding: 0;
+  margin-bottom: 0.3em;
+}
+
+.power-player scale.position trough {
+  min-height: 8px;
+
+  border-radius: 5px;
+}
+
+.power-player scale.position highlight {
+  background-color: $text;
+  border-radius: 5px;
+}
+
+.power-player scale.position slider {
+  all: unset;
+}
+
+.power-player button {
+  min-height: 1em;
+  min-width: 1em;
+
+  padding: 0.3em;
+
+  border-radius: 20px;
+}
+
+.power-player button.play-pause {
+  margin: 0 0.3em;
+}
+
+/*  __  __          _ _
+ * |  \/  | ___  __| (_) __ _
+ * | |\/| |/ _ \/ _` | |/ _` |
+ * | |  | |  __/ (_| | | (_| |
+ * |_|  |_|\___|\__,_|_|\__,_|
+ *
+ * ---------------------------
+*/
+.media-window {
+  background-color: transparent;
+}
+
 .player {
   min-width: 350px;
   
   padding: 10px;
 
-  background-color: @surface0;
+  background-color: $base;
 
   border-radius: 15px;
 }
@@ -434,8 +539,7 @@ window#notifications box.notifications {
   min-height: 100px;
   background-size: cover;
   background-position: center;
-  border-radius: 13px;
-  margin-right: 1em;
+  border-radius: 5px;
 }
 
 .player .title {
@@ -444,7 +548,7 @@ window#notifications box.notifications {
 
 .player .artist {
   font-size: 1.1em;
-  color: @insensitive_fg_color;
+  color: $text;
 }
 
 .player scale.position {
@@ -459,7 +563,7 @@ window#notifications box.notifications {
 }
 
 .player scale.position highlight {
-  background-color: @theme_fg_color;
+  background-image: linear-gradient(to right, $blue, $lavender);
   border-radius: 5px;
 }
 
@@ -470,7 +574,10 @@ window#notifications box.notifications {
 .player button {
   min-height: 1em;
   min-width: 1em;
+
   padding: 0.3em;
+
+  border-radius: 20px;
 }
 
 .player button.play-pause {

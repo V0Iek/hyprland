@@ -1,21 +1,17 @@
-import { MainBar, SecondBar } from "./bars/bars.js";
-import { notificationPopup } from "./notifications/notificationPopups.js";
-import { PowerMenu } from "./powermenu/powermenu.js";
-import {
-  LogoutPopup,
-  RebootPopup,
-  ShutdownPopup,
-} from "./powermenu/widgets/power-popups.js";
+const entry = App.configDir + '/main.ts'
+const outdir = '/tmp/ags/js'
 
-export default {
-  style: "./style.css",
-  windows: [
-    MainBar(),
-    SecondBar(),
-    notificationPopup,
-    PowerMenu(),
-    LogoutPopup(),
-    RebootPopup(),
-    ShutdownPopup(),
-  ],
-};
+try {
+    await Utils.execAsync([
+        'bun', 'build', entry,
+        '--outdir', outdir,
+        '--external', 'resource://*',
+        '--external', 'gi://*',
+    ])
+} catch (error) {
+    console.error(error)
+}
+
+const main = await import(`file://${outdir}/main.js`)
+
+export default main.default

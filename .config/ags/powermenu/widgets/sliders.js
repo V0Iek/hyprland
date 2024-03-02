@@ -31,6 +31,10 @@ const Volume = () =>
             self.value = audio.speaker.volume || 0;
           }),
       }),
+      Widget.Button({
+        child: Widget.Icon("go-next-symbolic"),
+        on_primary_click: () => Utils.execAsync("pavucontrol")
+      })
     ],
   });
 

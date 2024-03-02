@@ -20,6 +20,7 @@ const Player = (player) => {
   const img = Widget.Box({
     class_name: "img",
     vpack: "start",
+    vexpand: true,
     css: player.bind("cover_path").transform(
       (p) => `
             background-image: url('${p}');
@@ -79,7 +80,6 @@ const Player = (player) => {
 
   const icon = Widget.Icon({
     class_name: "icon",
-    hexpand: true,
     hpack: "end",
     vpack: "start",
     tooltip_text: player.identity || "",
@@ -119,12 +119,13 @@ const Player = (player) => {
   });
 
   return Widget.Box(
-    { class_name: "power-player" },
+    { class_name: "player", vertical: true },
     img,
     Widget.Box(
       {
         vertical: true,
         hexpand: true,
+        vexpand: true,
       },
       Widget.Box([title, icon]),
       artist,
@@ -140,9 +141,15 @@ const Player = (player) => {
 };
 
 export default () =>
-  Widget.Box({
-    vertical: true,
-    css: "padding: 1px",
-    visible: players.as((p) => p.length > 0),
-    children: players.as((p) => p.map(Player)),
+  Widget.Window({
+    name: "media",
+    class_name: "media-window",
+    anchor: ["top", "right"],
+    margins: [10, 380],
+    visible: false,
+    child: Widget.Box({
+      vertical: true,
+      visible: players.as((p) => p.length > 0),
+      children: players.as((p) => p.map(Player)),
+    }),
   });

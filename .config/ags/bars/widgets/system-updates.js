@@ -1,7 +1,9 @@
-const updates = Utils.exec('bash -c "checkupdates | wc -l"');
+const updates = Variable("", {
+  poll: [360000, 'bash -c "checkupdates | wc -l"'],
+});
 
 export const UpdateIndicator = () =>
   Widget.Label({
     class_name: "updates",
-    label: `  ${updates}`,
+    label: updates.bind().as((u) => `  ${u}`),
   });
