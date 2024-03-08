@@ -15,18 +15,18 @@ import { PowerMenu } from "./widgets/power-menu.js";
 export const SecondLeft = () =>
   Widget.Box({
     spacing: 8,
-    children: [ClientTitle()],
+    children: [Workspaces(), ClientTitle()],
   });
 
 export const SecondCenter = () =>
   Widget.Box({
     spacing: 8,
-    children: [Workspaces()],
+    children: [Clock()],
   });
 
 export const SecondRight = () =>
   Widget.Box({
     hpack: "end",
     spacing: 8,
-    children: [Clock(), PowerMenu()],
+    children: [PowerMenu()],
   });

@@ -1,23 +1,35 @@
 const mpris = await Service.import("mpris");
+const players = mpris.bind("players");
 
-export const Media = () =>
-  Widget.Button({
-    class_name: "media",
-    on_clicked: () => Utils.execAsync("ags -t media"),
-    child: Widget.Box({
-      children: [
-        Widget.Label("-").hook(
-          mpris,
-          (self) => {
-            if (mpris.players[0]) {
-              const { track_title } = mpris.players[0];
-              self.label = track_title;
-            } else {
-              self.label = "Nothing is playing";
-            }
-          },
-          "player-changed",
-        ),
-      ],
+const FALLBACK_ICON = "audio-x-generic-symbolic";
+
+const getPlayer = (name = null) =>
+  mpris.getPlayer(name) || mpris.players[0] || null;
+
+const Media = (player) => {
+  const icon = Widget.Icon({
+    tooltip_text: player.identity || "",
+    icon: player.bind("entry").transform((entry) => {
+      const name = `${entry}`;
+      return Utils.lookUpIcon(name) ? name : FALLBACK_ICON;
     }),
   });
+
+  return Widget.Box({ children: [icon] });
+};
+
+export default () => {
+  let player = getPlayer();
+
+  const btn = Widget.Button({
+    class_name: "media",
+    on_clicked: () => Utils.execAsync("ags -t media"),
+  });
+
+  const update = () => {
+    player = getPlayer();
+    btn.child = Media(player);
+  };
+
+  return btn.hook(update).hook(mpris, update, "notify::players");
+};

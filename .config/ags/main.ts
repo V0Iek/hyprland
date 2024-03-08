@@ -10,6 +10,7 @@ import {
 
 const scss = `${App.configDir}/style.scss`;
 const css = `/tmp/my-style.css`;
+Utils.exec(`sassc ${scss} ${css}`);
 
 Utils.monitorFile(
   scss,

@@ -144,8 +144,8 @@ export default () =>
   Widget.Window({
     name: "media",
     class_name: "media-window",
-    anchor: ["top", "right"],
-    margins: [10, 380],
+    anchor: ["top"],
+    margins: [10, 0],
     visible: false,
     child: Widget.Box({
       vertical: true,

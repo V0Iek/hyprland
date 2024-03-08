@@ -5,5 +5,6 @@ const date = Variable("", {
 export const Clock = () =>
   Widget.Label({
     class_name: "clock",
+    hpack: "center",
     label: date.bind(),
   });

@@ -23,6 +23,14 @@ window.bar {
   background-color: transparent;
 }
 
+.bar:first-child {
+  margin-left: 15px
+}
+
+.bar:last-child {
+  margin-right: 15px
+}
+
 label {
   font-weight: bold;
 }
@@ -35,36 +43,11 @@ label {
  *
  * -------------------
 */
-
-/* -------------------
- * Window
- * ------------------- */
-.client-title {
-  margin: 5px 15px 5px 15px;
-  padding: 0px 10px;
-
-  color: $lavender;
-  background: $base;
-
-  border-radius: 20px;
-
-  opacity: 0.8;
-}
-
-/*  ____           _
- * / ___|___ _ __ | |_ ___ _ __
- * | |   / _ \ '_ \| __/ _ \ '__|
- * | |__|  __/ | | | ||  __/ |
- * \____\___|_| |_|\__\___|_|
- *
- * ------------------------------
-*/
-
 /* ------------------------------
  * Workspaces
  * ------------------------------ */
 .workspaces {
-  margin: 5px 15px 5px 0px;
+  margin: 5px;
   padding: 0px 2px;
 
   font-style: normal;
@@ -104,34 +87,34 @@ label {
   transition: all 0.3s ease-in-out;
 }
 
-/*  ____  _       _     _
- * |  _ \(_) __ _| |__ | |_
- * | |_) | |/ _` | '_ \| __|
- * |  _ <| | (_| | | | | |_
- * |_| \_\_|\__, |_| |_|\__|
- *          |___/
- * -------------------------
-*/
-
-/* -------------------------
- * Media
- * ------------------------- */
-.media {
-  margin: 5px 15px 5px 0px;
+/* -------------------
+ * Window
+ * ------------------- */
+.client-title {
+  margin: 5px;
   padding: 0px 10px;
 
-  color: $text;
-  background-color: $base;
-  opacity: 0.8;
+  color: $lavender;
+  background: $base;
 
   border-radius: 20px;
+
+  opacity: 0.8;
 }
 
+/*  ____           _
+ * / ___|___ _ __ | |_ ___ _ __
+ * | |   / _ \ '_ \| __/ _ \ '__|
+ * | |__|  __/ | | | ||  __/ |
+ * \____\___|_| |_|\__\___|_|
+ *
+ * ------------------------------
+*/
 /* -------------------------
  * System updates
  * ------------------------- */
 .updates {
-  margin: 5px 15px 5px 0px;
+  margin: 5px;
   padding: 0px 10px;
 
   color: $red;
@@ -142,24 +125,10 @@ label {
 }
 
 /* -------------------------
- * System tray
- * ------------------------- */
-.systray {
-  margin: 5px 15px 5px 0px;
-  padding: 0px;
-}
-
-.systray button {
-  background-color: transparent;
-
-  border-radius: 20px;
-}
-
-/* -------------------------
  * Clock
  * ------------------------- */
 .clock {
-  margin: 5px 15px 3px 0px;
+  margin: 5px;
   padding: 0px 10px;
   font-size: 16px;
 
@@ -170,11 +139,47 @@ label {
   border-radius: 20px;
 }
 
+/* -------------------------
+ * Media
+ * ------------------------- */
+.media {
+  margin: 5px;
+  padding: 0px 10px;
+
+  color: $text;
+  background-color: $base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+}
+
+/*  ____  _       _     _
+ * |  _ \(_) __ _| |__ | |_
+ * | |_) | |/ _` | '_ \| __|
+ * |  _ <| | (_| | | | | |_
+ * |_| \_\_|\__, |_| |_|\__|
+ *          |___/
+ * -------------------------
+*/
+/* -------------------------
+ * System tray
+ * ------------------------- */
+.systray {
+  margin: 5px;
+  padding: 0px;
+}
+
+.systray button {
+  background-color: transparent;
+
+  border-radius: 20px;
+}
+
 /* ------------------------------
  * Power menu
  * ------------------------------ */
 .powermenu_button {
-  margin: 5px 15px 5px 0px;
+  margin: 5px;
   padding: 0px 10px;
   font-size: 16px;
 
