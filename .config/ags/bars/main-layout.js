@@ -1,9 +1,9 @@
 import { ClientTitle } from "./widgets/window-title.js";
 import { Workspaces } from "./widgets/workspaces.js";
-import Media from "./widgets/media.ts";
+import Media from "./widgets/media.js";
 import { UpdateIndicator } from "./widgets/system-updates.js";
 import { SysTray } from "./widgets/tray.js";
-import { Clock } from "./widgets/clock.js";
+import Clock from "./widgets/clock.js";
 import { PowerMenu } from "./widgets/power-menu.js";
 
 //  _                            _

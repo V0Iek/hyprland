@@ -23,7 +23,7 @@ export default () => {
 
   const btn = Widget.Button({
     class_name: "media",
-    on_clicked: () => Utils.execAsync("ags -t media"),
+    on_clicked: () => App.ToggleWindow("media"),
   });
 
   const update = () => {

@@ -5,16 +5,15 @@ export default () =>
     children: [
       Widget.Button({
         child: Widget.Icon("system-log-out-symbolic"),
-        on_primary_click: () =>
-          Utils.execAsync("ags -t logout-popup"),
+        on_primary_click: () => App.ToggleWindow("logout-popup"),
       }),
       Widget.Button({
         child: Widget.Icon("system-reboot-symbolic"),
-        on_primary_click: () => Utils.execAsync("ags -t reboot-popup"),
+        on_primary_click: () => App.ToggleWindow("reboot-popup"),
       }),
       Widget.Button({
         child: Widget.Icon("system-shutdown-symbolic"),
-        on_primary_click: () => Utils.execAsync("ags -t shutdown-popup"),
+        on_primary_click: () => App.ToggleWindow("shutdown-popup"),
       }),
     ],
   });

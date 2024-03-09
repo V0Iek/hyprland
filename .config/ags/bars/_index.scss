@@ -1,0 +1,160 @@
+/*  _          __ _
+ * | |    ___ / _| |_
+ * | |   / _ \ |_| __|
+ * | |__|  __/  _| |_
+ * |_____\___|_|  \__|
+ *
+ * -------------------
+*/
+/* ------------------------------
+ * Workspaces
+ * ------------------------------ */
+.workspaces {
+  margin: 5px;
+  padding: 0px 2px;
+
+  font-style: normal;
+  font-weight: bold;
+
+  background-color: $base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+  border: 0px;
+  button {
+    min-width: 20px;
+
+    margin: 3px 4px;
+    padding: 0px 5px;
+
+    background-color: $crust;
+    opacity: 0.4;
+
+    border: 0px;
+    border-radius: 20px;
+
+    transition: all 0.3s ease-in-out;
+  }
+  button.focused {
+    min-width: 40px;
+
+    color: $blue;
+    background-color: $crust;
+    opacity: 1;
+
+    border-radius: 20px;
+
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+/* -------------------
+ * Window
+ * ------------------- */
+.client-title {
+  margin: 5px;
+  padding: 0px 10px;
+
+  color: $lavender;
+  background: $base;
+
+  border-radius: 20px;
+
+  opacity: 0.8;
+}
+
+/*  ____           _
+ * / ___|___ _ __ | |_ ___ _ __
+ * | |   / _ \ '_ \| __/ _ \ '__|
+ * | |__|  __/ | | | ||  __/ |
+ * \____\___|_| |_|\__\___|_|
+ *
+ * ------------------------------
+*/
+/* -------------------------
+ * System updates
+ * ------------------------- */
+.updates {
+  margin: 5px;
+  padding: 0px 10px;
+
+  color: $red;
+  background-color: $base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+}
+
+/* -------------------------
+ * Clock
+ * ------------------------- */
+.clock {
+  margin: 5px;
+  padding: 0px 10px;
+  font-size: 16px;
+
+  color: $lavender;
+  background-color: $base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+}
+
+/* -------------------------
+ * Media
+ * ------------------------- */
+.media {
+  margin: 5px;
+  padding: 0px 10px;
+
+  color: $text;
+  background-color: $base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+}
+
+/*  ____  _       _     _
+ * |  _ \(_) __ _| |__ | |_
+ * | |_) | |/ _` | '_ \| __|
+ * |  _ <| | (_| | | | | |_
+ * |_| \_\_|\__, |_| |_|\__|
+ *          |___/
+ * -------------------------
+*/
+/* -------------------------
+ * System tray
+ * ------------------------- */
+.systray {
+  margin: 5px;
+  padding: 0px;
+
+  button {
+    background-color: transparent;
+
+    border-radius: 20px;
+  }
+}
+
+/* ------------------------------
+ * Power menu
+ * ------------------------------ */
+.powermenu_button {
+  margin: 5px;
+  padding: 0px 10px;
+  font-size: 16px;
+
+  color: $text;
+  background-color: $base;
+  opacity: 0.8;
+
+  border-radius: 20px;
+ 
+  image {
+    margin-left: 10px;
+  }
+
+  image:first-child {
+    margin-left: 0;
+  }
+}

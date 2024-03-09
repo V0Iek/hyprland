@@ -1,0 +1,70 @@
+/*  __  __          _ _
+ * |  \/  | ___  __| (_) __ _
+ * | |\/| |/ _ \/ _` | |/ _` |
+ * | |  | |  __/ (_| | | (_| |
+ * |_|  |_|\___|\__,_|_|\__,_|
+ *
+ * ---------------------------
+*/
+.media-window {
+  background-color: transparent;
+}
+
+.player {
+  min-width: 350px;
+
+  padding: 10px;
+
+  background-color: $base;
+
+  border-radius: 15px;
+  .img {
+    min-width: 100px;
+    min-height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+  }
+
+  .title {
+    font-size: 1.2em;
+  }
+
+  .artist {
+    font-size: 1.1em;
+    color: $text;
+  }
+
+  scale.position {
+    padding: 0;
+    margin-bottom: 0.3em;
+  }
+
+  scale.position trough {
+    min-height: 8px;
+
+    border-radius: 5px;
+  }
+
+  scale.position highlight {
+    background-image: linear-gradient(to right, $blue, $lavender);
+    border-radius: 5px;
+  }
+
+  scale.position slider {
+    all: unset;
+  }
+
+  button {
+    min-height: 1em;
+    min-width: 1em;
+
+    padding: 0.3em;
+
+    border-radius: 20px;
+  }
+
+  button.play-pause {
+    margin: 0 0.3em;
+  }
+}

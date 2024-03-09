@@ -7,6 +7,7 @@ import {
   RebootPopup,
   ShutdownPopup,
 } from "./powermenu/widgets/power-popups.js";
+import NotificationCalendar from "./notification-calendar/notification-calendar.js";
 
 const scss = `${App.configDir}/style.scss`;
 const css = `/tmp/my-style.css`;
@@ -33,5 +34,6 @@ export default {
     LogoutPopup(),
     RebootPopup(),
     ShutdownPopup(),
+    NotificationCalendar(),
   ],
 };

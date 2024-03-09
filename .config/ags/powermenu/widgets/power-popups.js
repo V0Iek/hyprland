@@ -16,7 +16,7 @@ export const ShutdownPopup = () =>
           children: [
             Widget.Button({
               child: Widget.Label("  Cancel  "),
-              on_primary_click: () => Utils.execAsync("ags -t shutdown-popup"),
+              on_primary_click: () => App.ToggleWindow("shutdown-popup"),
             }),
             Widget.Button({
               child: Widget.Label("Shutdown"),
@@ -46,7 +46,7 @@ export const RebootPopup = () =>
           children: [
             Widget.Button({
               child: Widget.Label("Cancel"),
-              on_primary_click: () => Utils.execAsync("ags -t reboot-popup"),
+              on_primary_click: () => App.ToggleWindow("reboot-popup"),
             }),
             Widget.Button({
               child: Widget.Label("Reboot"),
@@ -76,7 +76,7 @@ export const LogoutPopup = () =>
           children: [
             Widget.Button({
               child: Widget.Label("Cancel"),
-              on_primary_click: () => Utils.execAsync("ags -t logout-popup"),
+              on_primary_click: () => App.ToggleWindow("logout-popup"),
             }),
             Widget.Button({
               child: Widget.Label("Logout"),

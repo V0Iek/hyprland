@@ -1,6 +1,6 @@
 import { ClientTitle } from "./widgets/window-title.js";
 import { Workspaces } from "./widgets/workspaces.js";
-import { Clock } from "./widgets/clock.js";
+import Clock from "./widgets/clock.js";
 import { PowerMenu } from "./widgets/power-menu.js";
 
 //  _                            _
