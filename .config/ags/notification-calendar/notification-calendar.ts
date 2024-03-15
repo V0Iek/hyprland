@@ -1,3 +1,8 @@
+import { Notification } from "./notification.js";
+
+const notifications = await Service.import("notifications");
+const popups = notifications.bind("notifications");
+
 const notificationSection = () =>
   Widget.Box({
     class_name: "notification-section",
@@ -13,13 +18,18 @@ const notificationSection = () =>
           }),
           Widget.Button({
             hpack: "end",
-            on_primary_click: () => print("Clear notifications"),
+            on_primary_click: () => notifications.clear(),
             child: Widget.Box([
               Widget.Label("Clear"),
               Widget.Icon("edit-delete-symbolic"),
             ]),
           }),
         ],
+      }),
+      Widget.Box({
+        class_name: "notifications",
+        vertical: true,
+        children: popups.as((popups) => popups.map(Notification)),
       }),
     ],
   });

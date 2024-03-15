@@ -1,5 +1,4 @@
 const notifications = await Service.import("notifications");
-const popups = notifications.bind("popups");
 
 const NotificationIcon = ({ app_entry, app_icon, image }) => {
   if (image) {
@@ -82,13 +81,3 @@ export const Notification = (n) => {
     }),
   });
 };
-
-export const notificationPopup = Widget.Window({
-  name: "notifications",
-  anchor: ["top"],
-  child: Widget.Box({
-    class_name: "notifications",
-    vertical: true,
-    children: popups.as((popups) => popups.map(Notification)),
-  }),
-});

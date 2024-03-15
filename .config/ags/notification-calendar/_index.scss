@@ -41,5 +41,41 @@
 }
 
 .calendar-uptime {
+  margin-bottom: 20px;
+
   font-size: 14px;
+}
+
+calendar {
+  padding: 5px;
+
+  font-size: 16px;
+
+  color: $text;
+  background-color: $surface0;
+
+  border: none;
+  border-radius: 10px;
+
+  &.button {
+    color: $blue;
+  }
+
+  &:selected {
+    box-shadow: inset 0 0 0 2px $lavender;
+
+    border-radius: 20px;
+  }
+
+  &.header {
+    color: $lavender;
+  }
+
+  &.highlight {
+    color: $blue;
+  }
+
+  &:indeterminate {
+    color: $surface2;
+  }
 }
