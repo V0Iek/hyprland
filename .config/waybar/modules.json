@@ -72,7 +72,12 @@
   },
 
   "group/pulseaudio": {
-    "orientation": "horizontal",
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
     "modules": ["pulseaudio", "pulseaudio/slider"]
   },
 
@@ -134,8 +139,7 @@
   },
 
   "custom/exit": {
-    //"format": " ",
-    "format": "󰐥 ",
+    "format": " ",
     "on-click": "wlogout",
     "tooltip": false
   }

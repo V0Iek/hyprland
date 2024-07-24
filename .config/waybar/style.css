@@ -19,12 +19,22 @@
  * ----------------------------------------------------- */
 
 * {
-  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
-    sans-serif;
+  margin: 0 10px;
+  padding: 0;
+
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+
+  border-radius: 30px;
 }
 
 window#waybar {
+  color: @text;
+  
+  opacity: .8;
+  
   background: transparent;
+  
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -34,27 +44,17 @@ window#waybar {
  * ----------------------------------------------------- */
 
 tooltip {
-  border-radius: 10px;
-  background-color: @base;
-  opacity: 0.8;
   padding: 20px;
-  margin: 0px;
+  
+  background-color: @base;
+  
+  opacity: 0.8;
+  
+  border-radius: 10px;
 }
 
 tooltip label {
   color: @text;
-}
-
-/* -----------------------------------------------------
- * Modules
- * ----------------------------------------------------- */
-
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
-}
-
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
 }
 
 /*  _          __ _
@@ -69,13 +69,10 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #custom-appmenu {
-  background-color: @base;
-  font-size: 16px;
+  padding: 0px 10px;
+
   color: @blue;
-  border-radius: 15px;
-  padding: 0px 10px 0px 10px;
-  margin: 3px 15px 3px 14px;
-  opacity: 0.8;
+  background-color: @base;
 }
 
 /* -----------------------------------------------------
@@ -83,14 +80,9 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #window {
-  background: @base;
-  margin: 5px 15px 5px 0px;
-  padding: 2px 10px 0px 10px;
-  border-radius: 12px;
-  color: @text;
-  font-size: 16px;
-  font-weight: normal;
-  opacity: 0.8;
+  padding: 0px 10px;
+
+  background-color: @base;
 }
 
 window#waybar.empty #window {
@@ -109,41 +101,34 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #workspaces {
-  background: @crust;
-  margin: 2px 1px 3px 1px;
-  padding: 0px 1px;
-  border-radius: 15px;
-  border: 0px;
   font-weight: bold;
-  font-style: normal;
-  opacity: 0.8;
-  font-size: 16px;
+  
+  background-color: @crust;
 }
 
 #workspaces button {
-  padding: 0px 5px;
-  margin: 4px 3px;
-  border-radius: 15px;
-  border: 0px;
-  color: @text;
+  margin: 5px;
+  
   background-color: @base;
+  
   transition: all 0.3s ease-in-out;
-  opacity: 0.4;
 }
 
 #workspaces button.active {
-  color: @blue;
-  background: @base;
-  border-radius: 15px;
   min-width: 40px;
-  transition: all 0.3s ease-in-out;
+  
+  color: @blue;
+  background-color: @base;
+  
   opacity: 1;
+  
+  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
   color: @blue;
-  background: @base;
-  border-radius: 15px;
+  background-color: @base;
+  
   opacity: 0.7;
 }
 
@@ -160,27 +145,25 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-  background-color: @base;
-  font-size: 16px;
+  padding: 0px 10px;
+
   color: @red;
-  border-radius: 15px;
-  padding: 2px 10px 0px 10px;
-  margin: 5px 15px 5px 0px;
-  opacity: 0.8;
+  background-color: @base;
 }
 
 #custom-updates.green {
+  color: @text;
   background-color: @green;
 }
 
 #custom-updates.yellow {
-  background-color: @yellow;
   color: @text;
+  background-color: @yellow;
 }
 
 #custom-updates.red {
-  background-color: @red;
   color: @text;
+  background-color: @red;
 }
 
 /* -----------------------------------------------------
@@ -188,26 +171,18 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  background-color: @base;
-  font-size: 16px;
+  padding: 0px 10px;
+
   color: @peach;
-  border-radius: 15px;
-  padding: 2px 10px 0px 10px;
-  margin: 5px 15px 5px 0px;
-  opacity: 0.8;
+  background-color: @base;
 }
 
 #pulseaudio.muted {
-  background-color: @base;
   color: @red;
 }
 
 #pulseaudio-slider {
-  background-color: @base;
   color: @peach;
-  padding: 0;
-  margin: 0;
-  opacity: 0.8;
 }
 
 #pulseaudio-slider slider {
@@ -217,14 +192,18 @@ window#waybar.empty #window {
 #pulseaudio-slider trough {
   min-width: 80px;
   min-height: 5px;
-  border-radius: 5px;
+  
   background-color: @crust;
+  
+  border-radius: 5px;
 }
 
 #pulseaudio-slider highlight {
   min-width: 10px;
-  border-radius: 5px;
+  
   background-color: @peach;
+  
+  border-radius: 5px;
 }
 
 
@@ -233,22 +212,17 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-  background-color: @base;
-  font-size: 16px;
+  padding: 0px 10px;
+
   color: @yellow;
-  border-radius: 15px;
-  padding: 2px 10px 0px 10px;
-  margin: 5px 15px 5px 0px;
-  opacity: 0.8;
+  background-color: @base;
 }
 
 #network.ethernet {
-  background-color: @base;
   color: @yellow;
 }
 
 #network.wifi {
-  background-color: @base;
   color: @yellow;
 }
 
@@ -259,14 +233,9 @@ window#waybar.empty #window {
 #disk,
 #memory,
 #cpu {
-  margin: 0px;
-  padding: 0px;
   font-size: 16px;
+  
   color: @green;
-}
-
-#memory {
-  margin-right: 10px;
 }
 
 /* -----------------------------------------------------
@@ -274,24 +243,15 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-system {
-  margin-right: 23px;
   font-size: 20px;
   font-weight: bold;
-  opacity: 0.8;
+  
   color: @green;
-}
-
-#custom-system {
-  margin-right: 15px;
 }
 
 /* -----------------------------------------------------
  * Tray
  * ----------------------------------------------------- */
-
-#tray {
-  padding: 0px 15px 0px 0px;
-}
 
 #tray > .passive {
   -gtk-icon-effect: dim;
@@ -306,13 +266,10 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #clock {
-  background-color: @base;
-  font-size: 16px;
+  padding: 0px 10px;
+
   color: @lavender;
-  border-radius: 15px;
-  padding: 1px 10px 0px 10px;
-  margin: 3px 15px 3px 0px;
-  opacity: 0.8;
+  background-color: @base;
 }
 
 /* -----------------------------------------------------
@@ -320,8 +277,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-exit {
-  margin: 0px 20px 0px 0px;
-  padding: 0px;
   font-size: 20px;
+  
   color: @text;
 }
