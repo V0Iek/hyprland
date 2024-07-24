@@ -38,11 +38,11 @@
   //          |___/
 
   "custom/updates": {
-    "format": "  {}",
+    "format": "   {}",
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
-    "on-click": "alacritty -e 'sudo pacman -Syu'",
+    "on-click": "alacritty -e 'yay -Syu'",
     "signal": 8,
     "tooltip": false
   },
