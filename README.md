@@ -30,7 +30,7 @@ First, check out the dotfiles repo in your $HOME directory using git
 
 ```
 $ git clone git@github.com:V0Iek/hyprland.git .dotfiles/hyprland
-$ cd .hyprconfig
+$ cd .dotfiles
 ```
 
 then use GNU stow to create symlinks
