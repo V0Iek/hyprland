@@ -265,11 +265,15 @@ window#waybar.empty #window {
  * Clock
  * ----------------------------------------------------- */
 
-#clock {
+#glock {
   padding: 0px 10px;
 
   color: @lavender;
   background-color: @base;
+}
+
+#custom-notification {
+  margin-left: 10px;
 }
 
 /* -----------------------------------------------------

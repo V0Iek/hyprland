@@ -8,8 +8,10 @@ CURSOR="McMojave-cursors"
 SCHEMA="gsettings set org.gnome.desktop.interface"
 
 apply_themes() {
-  ${SHEMA} gtk-theme "$THEME"
-  ${SHEMA} icon-theme "$ICONS"
-  ${SHEMA} cursor-theme "$CURSOR"
-  ${SHEMA} font-name "$FONT"
+  ${SCHEMA} gtk-theme "$THEME"
+  ${SCHEMA} icon-theme "$ICONS"
+  ${SCHEMA} cursor-theme "$CURSOR"
+  ${SCHEMA} font-name "$FONT"
 }
+
+apply_themes
