@@ -5,5 +5,5 @@ Each branch contains another config.
 
 ## List
 
-- catpuccin-bmw
+- [catpuccin-bmw](https://github.com/V0Iek/hyprland/tree/catpuccin-bmw)
   ![catpuccin-bmw](/Screenshots/catpuccin-bmw.png)
