@@ -71,6 +71,10 @@ tooltip label {
   background-color: @base;
 }
 
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
 /* -----------------------------------------------------
  * Window
  * ----------------------------------------------------- */
