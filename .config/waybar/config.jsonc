@@ -6,13 +6,14 @@
     "mode": "dock",
     "margin-top": 10,
     "margin-bottom": 0,
+    "reload_style_on_change": true,
 
     // Load Modules
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": [ "custom/appmenu", "hyprland/window" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "custom/updates", "pulseaudio", "network", "group/hardware", "tray", "group/glock", "custom/exit" ],
+    "modules-right": [ "tray", "custom/updates", "pulseaudio", "network", "group/hardware", "group/glock", "custom/exit" ],
   },
 
   {
@@ -22,14 +23,13 @@
     "mode": "dock",
     "margin-top": 10,
     "margin-bottom": 0,
+    "reload_style_on_change": true,
 
     // Load Modules
     "include": ["~/.config/waybar/modules.json"],
 
     "modules-left": [ "custom/appmenu", "hyprland/window" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "tray", "clock", "custom/exit" ],
+    "modules-right": [ "tray", "group/glock", "custom/exit" ],
   }
 ]
-
-# vim: ft=json

@@ -20,23 +20,21 @@
 
 * {
   margin: 0 10px;
-  padding: 0;
+  padding: 0 10px;
 
-  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-
-  border-radius: 30px;
+  border-radius: 50px;
 }
 
 window#waybar {
+  margin: 0px;
+  padding: 0px;
+
+  font-family: FiraSans Semibold;
+  font-size: 16px;
+
   color: @text;
-  
-  opacity: .8;
-  
+
   background: transparent;
-  
-  transition-property: background-color;
-  transition-duration: 0.5s;
 }
 
 /* -----------------------------------------------------
@@ -69,8 +67,6 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #custom-appmenu {
-  padding: 0px 10px;
-
   color: @blue;
   background-color: @base;
 }
@@ -80,13 +76,7 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #window {
-  padding: 0px 10px;
-
   background-color: @base;
-}
-
-window#waybar.empty #window {
-  background-color: transparent;
 }
 
 /*  ____           _
@@ -101,35 +91,42 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #workspaces {
+  padding: 0;
+    
   font-weight: bold;
-  
+
   background-color: @crust;
 }
 
 #workspaces button {
   margin: 5px;
-  
+  padding: 0;
+
   background-color: @base;
-  
+
   transition: all 0.3s ease-in-out;
+}
+
+#workspaces box {
+  margin: 0;
+  padding: 0;
+}
+
+#workspaces label {
+  margin: 0;
+  padding: 0 10px;
 }
 
 #workspaces button.active {
   min-width: 40px;
-  
+
   color: @blue;
   background-color: @base;
-  
-  opacity: 1;
-  
-  transition: all 0.3s ease-in-out;
 }
 
 #workspaces button:hover {
   color: @blue;
   background-color: @base;
-  
-  opacity: 0.7;
 }
 
 /*  ____  _       _     _
@@ -145,25 +142,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-  padding: 0px 10px;
-
   color: @red;
   background-color: @base;
-}
-
-#custom-updates.green {
-  color: @text;
-  background-color: @green;
-}
-
-#custom-updates.yellow {
-  color: @text;
-  background-color: @yellow;
-}
-
-#custom-updates.red {
-  color: @text;
-  background-color: @red;
 }
 
 /* -----------------------------------------------------
@@ -171,94 +151,31 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  padding: 0px 10px;
-
   color: @peach;
   background-color: @base;
 }
-
 #pulseaudio.muted {
   color: @red;
 }
-
-#pulseaudio-slider {
-  color: @peach;
-}
-
-#pulseaudio-slider slider {
-  opacity: 0;
-}
-
-#pulseaudio-slider trough {
-  min-width: 80px;
-  min-height: 5px;
-  
-  background-color: @crust;
-  
-  border-radius: 5px;
-}
-
-#pulseaudio-slider highlight {
-  min-width: 10px;
-  
-  background-color: @peach;
-  
-  border-radius: 5px;
-}
-
 
 /* -----------------------------------------------------
  * Network
  * ----------------------------------------------------- */
 
 #network {
-  padding: 0px 10px;
-
   color: @yellow;
   background-color: @base;
-}
-
-#network.ethernet {
-  color: @yellow;
-}
-
-#network.wifi {
-  color: @yellow;
 }
 
 /* -----------------------------------------------------
  * Hardware Group
  * ----------------------------------------------------- */
 
-#disk,
-#memory,
-#cpu {
-  font-size: 16px;
-  
+#hardware {
+  padding: 0;
+
   color: @green;
-}
-
-/* -----------------------------------------------------
- * Custom system
- * ----------------------------------------------------- */
-
-#custom-system {
-  font-size: 20px;
-  font-weight: bold;
-  
-  color: @green;
-}
-
-/* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
+  background-color: @base;
 }
 
 /* -----------------------------------------------------
@@ -266,22 +183,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #glock {
-  padding: 0px 10px;
+  padding: 0;
 
   color: @lavender;
   background-color: @base;
-}
-
-#custom-notification {
-  margin-left: 10px;
-}
-
-/* -----------------------------------------------------
- * Custom Exit
- * ----------------------------------------------------- */
-
-#custom-exit {
-  font-size: 20px;
-  
-  color: @text;
 }

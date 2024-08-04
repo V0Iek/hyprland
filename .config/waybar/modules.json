@@ -95,7 +95,7 @@
 
   // Group Hardware
   "custom/system": {
-    "format": " ",
+    "format": "",
     "tooltip": false
   },
 
