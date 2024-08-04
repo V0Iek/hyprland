@@ -37,6 +37,11 @@ window#waybar {
   background: transparent;
 }
 
+window#waybar > box .modules-left, .modules-center, .modules-right {
+  margin: 0;
+  padding: 0;
+}
+
 /* -----------------------------------------------------
  * Tooltips
  * ----------------------------------------------------- */
@@ -122,7 +127,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
-  min-width: 40px;
+  min-width: 50px;
 
   color: @blue;
   background-color: @base;
@@ -140,6 +145,14 @@ window#waybar.empty #window {
  * |_| \_\_|\__, |_| |_|\__|
  *          |___/
 */
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray image {
+  margin: 0;
+}
 
 /* -----------------------------------------------------
  * Custom Updates
@@ -191,4 +204,8 @@ window#waybar.empty #window {
 
   color: @lavender;
   background-color: @base;
+}
+
+#custom-notification {
+  margin: 0;
 }

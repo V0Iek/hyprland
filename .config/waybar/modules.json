@@ -37,6 +37,10 @@
   // |_| \_\_|\__, |_| |_|\__|
   //          |___/
 
+  "tray": {
+    "icon-size": 20,
+  },
+
   "custom/updates": {
     "format": "   {}",
     "interval": 3600,
@@ -124,11 +128,6 @@
       "transition-left-to-right": false
     },
     "modules": ["custom/system", "disk", "cpu", "memory"]
-  },
-
-  "tray": {
-    "icon-size": 20,
-    "spacing": 10
   },
 
   "group/glock": {
