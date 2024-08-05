@@ -7,3 +7,6 @@ Each branch contains another config.
 
 - [catpuccin-bmw](https://github.com/V0Iek/hyprland/tree/catpuccin-bmw)
   ![catpuccin-bmw](/Screenshots/catpuccin-bmw.png)
+
+- [pywal](https://github.com/V0Iek/hyprland/tree/pywal)
+  ![pywal](/Screenshots/pywal.gif)
