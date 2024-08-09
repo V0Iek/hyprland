@@ -24,6 +24,10 @@ pacman -S git
 pacman -S stow
 ```
 
+### Firefox theme
+
+[AnimatedFox](https://github.com/RemyIsCool/AnimatedFox)
+
 ## Installation
 
 First, check out the dotfiles repo in your $HOME directory using git

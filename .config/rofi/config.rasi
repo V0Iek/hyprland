@@ -2,7 +2,7 @@
 
 configuration {
   show-icons: true;
-  icon-theme: "Sweet-Rainbow";
+  icon-theme: "Sweet-Blue";
   display-drun: "";
   display-window: "﩯 ";
   display-combi: "  ";

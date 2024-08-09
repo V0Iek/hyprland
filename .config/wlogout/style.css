@@ -4,7 +4,7 @@
 }
 
 window {
-  background-color: rgba(30, 30, 46, .1);
+  background-color: rgba(30, 30, 46, .5);
 }
 
 button {
@@ -13,7 +13,7 @@ button {
   font-size: 20px;
 
   color: #cdd6f4;
-  background-color: rgba(30, 30, 46, .25);
+  background-color: rgba(30, 30, 46, .75);
   
   border: 2px solid;
   
@@ -28,7 +28,7 @@ button:focus,
 button:active,
 button:hover {
   color: #89b4fa;
-  background-color: rgba(30, 30, 46, .5);
+  background-color: rgba(30, 30, 46, .85);
   outline-style: none;
 }
 

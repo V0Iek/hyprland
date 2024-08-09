@@ -1,7 +1,7 @@
 #!/bin/sh
 
 THEME="Catppuccin-Mocha-Standard-Lavender-Dark"
-ICONS="Sweet-Rainbow"
+ICONS="Sweet-Blue"
 FONT="Fira Sans Semibold 10"
 CURSOR="McMojave-cursors"
 

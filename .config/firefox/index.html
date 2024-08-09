@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New Tab</title>
+	<style>
+		body {
+			margin: 0;
+			color: #cdd6f4;
+			font-family: "JetBrainsMono Nerd Font";
+			background-color: #1e1e2e;
+		}
+
+		.center {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			max-width: 30rem;
+			margin-inline: auto;
+			margin-top: 30vh;
+		}
+
+		.title {
+			font-size: 4rem;
+			font-weight: 900;
+			margin-bottom: 1.5rem;
+			text-align: center;
+		}
+
+		.search {
+			border-radius: 99999px;
+			border: none;
+			padding-block: 0.75rem;
+			padding-inline: 1rem;
+			background-color: #313244;
+			color: #a6adc8;
+			font-size: 1.2rem;
+			font-family: monospace;
+			margin-bottom: 1rem;
+
+			&:focus {
+				outline: 2px solid #b4befe;
+			}
+		}
+
+		.bookmarks {
+			display: flex;
+			gap: 5rem;
+			margin-right: 1.5rem;
+		}
+
+		.bookmark {
+			font-size: 5rem;
+			text-decoration: none;
+			transition: 0.25s opacity ease;
+
+			&:hover {
+				opacity: 0.5;
+			}
+
+			&.youtube {
+				color: #f38ba8;
+			}
+
+			&.reddit {
+				color: #fab387;
+			}
+
+			&.github {
+				color: #f9e2af;
+			}
+
+			&.office {
+				color: #a6e3a1;
+			}
+    }
+	</style>
+	<script>
+		function searchWithStartpage(event) {
+			if (event.key === "Enter" && event.target.value !== "") {
+				window.location = "https://www.google.com/search?client=firefox-b-d&q=" + event.target.value
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div class="center">
+		<h1 class="title">Welcome!</h1>
+		<input class="search" type="text" placeholder="Search with Startpage" onkeypress="searchWithStartpage(event)">
+		<div class="bookmarks">
+			<a class="bookmark youtube" href="https://www.youtube.com"></a>
+			<a class="bookmark reddit" href="https://www.reddit.com"></a>
+			<a class="bookmark github" href="https://github.com"></a>
+			<a class="bookmark office" href="https://www.office.com">󰏆</a>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -13,8 +13,9 @@
 
   "hyprland/window": {
     "rewrite": {
-      "(.*) - Brave": "Brave",
-      "(.*) - Discord": "Discord"
+      "(.*)Brave": "Brave",
+      "(.*)Mozilla Firefox": "Mozilla Firefox",
+      "(.*)Discord": "Discord"
     },
     "separate-outputs": true
   },
@@ -65,7 +66,7 @@
       "default": ["󰕿 ", "󰖀 ", "󰕾 "]
     },
     "scroll-step": 1,
-    "on-click": "pavucontrol",
+    "on-click": "pwvucontrol",
     "ignored-sinks": ["Easy Effects Sink"]
   },
 
@@ -146,13 +147,13 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'><sup> </sup></span>",
+      "notification": "",
       "none": "",
-      "dnd-notification": "<span foreground='red'><sup> </sup></span>",
+      "dnd-notification": "",
       "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'><sup> </sup></span>",
+      "inhibited-notification": "",
       "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'><sup> </sup></span>",
+      "dnd-inhibited-notification": "",
       "dnd-inhibited-none": ""
     },
     "return-type": "json",
@@ -165,7 +166,7 @@
 
   "custom/exit": {
     "format": " ",
-    "on-click": "wlogout -b 4",
+    "on-click": "wlogout -b 2",
     "tooltip": false
   }
 }
