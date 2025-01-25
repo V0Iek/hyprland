@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 THEME="Catppuccin-Mocha-Standard-Lavender-Dark"
 ICONS="Sweet-Blue"

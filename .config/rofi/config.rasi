@@ -3,9 +3,9 @@
 configuration {
   show-icons: true;
   icon-theme: "Sweet-Blue";
-  display-drun: "";
-  display-window: "﩯 ";
+  display-drun: "";
+  display-window: "󱂬 ";
   display-combi: "  ";
 }
 
-@theme "global/rofi.rasi"
+@theme "themes/catppuccin-mocha.rasi"

@@ -9,9 +9,9 @@ dir="$HOME/.config/rofi/themes"
 rofi_command="rofi -theme $dir/catppuccin-mocha.rasi"
 
 # Options
-screen="  Screen"
-area="  Area"
-window="  Window"
+screen="󰍹  Screen"
+window="󱂬  Window"
+area="󰒉  Area"
 
 # Variable passed to rofi
 options="$screen\n$area\n$window"
