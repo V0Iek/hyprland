@@ -12,7 +12,7 @@
 /* -----------------------------------------------------
  * Import colors 
  * ----------------------------------------------------- */
-@import "mocha.css";
+@import "colors.css";
 
 /* -----------------------------------------------------
  * General 
@@ -49,7 +49,7 @@ window#waybar > box .modules-left, .modules-center, .modules-right {
 tooltip {
   padding: 20px;
   
-  background-color: @base;
+  background-color: @background;
   
   opacity: 0.8;
   
@@ -57,7 +57,7 @@ tooltip {
 }
 
 tooltip label {
-  color: @text;
+  color: @on_surface;
 }
 
 /*  _          __ _
@@ -72,8 +72,8 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #custom-appmenu {
-  color: @blue;
-  background-color: @base;
+  color: @primary;
+  background-color: @background;
 }
 
 window#waybar.empty #window {
@@ -85,7 +85,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #window {
-  background-color: @base;
+  background-color: @background;
 }
 
 /*  ____           _
@@ -104,14 +104,14 @@ window#waybar.empty #window {
     
   font-weight: bold;
 
-  background-color: @crust;
+  background-color: @background;
 }
 
 #workspaces button {
   margin: 5px;
   padding: 0;
 
-  background-color: @base;
+  background-color: @secondary_container;
 
   transition: all 0.3s ease-in-out;
 }
@@ -129,13 +129,13 @@ window#waybar.empty #window {
 #workspaces button.active {
   min-width: 50px;
 
-  color: @blue;
-  background-color: @base;
+  color: @primary;
+  background-color: @primary_container;
 }
 
 #workspaces button:hover {
-  color: @blue;
-  background-color: @base;
+  color: @on_primary;
+  background-color: @on_primary_container;
 }
 
 /*  ____  _       _     _
@@ -163,8 +163,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-updates {
-  color: @red;
-  background-color: @base;
+  color: @primary;
+  background-color: @background;
 }
 
 /* -----------------------------------------------------
@@ -172,11 +172,11 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  color: @peach;
-  background-color: @base;
+  color: @primary;
+  background-color: @background;
 }
 #pulseaudio.muted {
-  color: @red;
+  color: @error;
 }
 
 /* -----------------------------------------------------
@@ -184,8 +184,8 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-  color: @yellow;
-  background-color: @base;
+  color: @primary;
+  background-color: @background;
 }
 
 /* -----------------------------------------------------
@@ -195,6 +195,6 @@ window#waybar.empty #window {
 #glock {
   padding: 0;
 
-  color: @lavender;
-  background-color: @base;
+  color: @primary;
+  background-color: @background;
 }
