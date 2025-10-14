@@ -47,7 +47,7 @@
   },
 
   "custom/updates": {
-    "format": " {}",
+    "format": "  {}",
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
