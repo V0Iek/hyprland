@@ -1,7 +1,6 @@
 #!/bin/bash
 
-killall waybar
 killall swaync
 
-waybar &
+exec $HOME/.config/waybar/launch.sh
 swaync &

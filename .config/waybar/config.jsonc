@@ -13,7 +13,7 @@
 
     "modules-left": [ "custom/appmenu", "hyprland/window" ],
     "modules-center": [ "hyprland/workspaces" ],
-    "modules-right": [ "tray", "custom/updates", "pulseaudio", "network", "group/hardware", "group/glock", "custom/exit" ],
+    "modules-right": [ "tray", "custom/updates", "pulseaudio", "network", "group/glock" ],
   },
 
   {

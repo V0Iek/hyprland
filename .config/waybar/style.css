@@ -29,7 +29,7 @@ window#waybar {
   margin: 0px;
   padding: 0px;
 
-  font-family: FiraSans Semibold;
+  font-family: "FiraSans Semibold", "JetBrainsMono Nerd Font Propo";
   font-size: 16px;
 
   color: @text;
@@ -189,17 +189,6 @@ window#waybar.empty #window {
 }
 
 /* -----------------------------------------------------
- * Hardware Group
- * ----------------------------------------------------- */
-
-#hardware {
-  padding: 0;
-
-  color: @green;
-  background-color: @base;
-}
-
-/* -----------------------------------------------------
  * Clock
  * ----------------------------------------------------- */
 
@@ -208,8 +197,4 @@ window#waybar.empty #window {
 
   color: @lavender;
   background-color: @base;
-}
-
-#custom-notification {
-  margin: 0;
 }

@@ -27,6 +27,10 @@
   //  \____\___|_| |_|\__\___|_|
 
   "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5,
+      //"HDMI-A-1": 3
+    },
     "all-outputs": false,
     "on-click": "activate"
   },
@@ -43,7 +47,7 @@
   },
 
   "custom/updates": {
-    "format": "   {}",
+    "format": " {}",
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
@@ -88,47 +92,14 @@
 
   "network": {
     "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "  {ifname}",
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": " {ifname}",
     "format-disconnected": "Disconnected",
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
-  },
-
-  // Group Hardware
-  "custom/system": {
-    "format": "",
-    "tooltip": false
-  },
-
-  "cpu": {
-    "format": "/   {usage}% ",
-    "on-click": "alacritty -e htop"
-  },
-
-  "memory": {
-    "format": "/  {}% ",
-    "on-click": "alacritty -e htop"
-  },
-
-  "disk": {
-    "interval": 30,
-    "format": "󰋊  {percentage_used}% ",
-    "path": "/",
-    "on-click": "alacritty -e htop"
-  },
-
-  "group/hardware": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "children-class": "not-memory",
-      "transition-left-to-right": false
-    },
-    "modules": ["custom/system", "disk", "cpu", "memory"]
   },
 
   "group/glock": {
@@ -163,10 +134,4 @@
     "on-click-right": "swaync-client -d -sw",
     "escape": true
   },
-
-  "custom/exit": {
-    "format": " ",
-    "on-click": "wlogout -b 2",
-    "tooltip": false
-  }
 }
