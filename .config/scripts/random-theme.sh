@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 wallpaper_dir="$HOME/.Wallpapers"
 wallpapers=("$wallpaper_dir"/*)

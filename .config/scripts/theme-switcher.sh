@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ "$#" -ne 1 ]; then
   echo "theme-switcher: no path"
