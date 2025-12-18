@@ -9,7 +9,7 @@ Ensure you have the following installed on your system
 ### Dependencies
 
 ``` sh 
-yay -S hyprland xdg-desktop-portal-hyprland rofi alacritty swww polkit-kde-agent wlogout hyprlock hypridle grim slurp swappy lf ttf-fira-sans otf-font-awesome spicetify-cli waybar cava nemo sway-nc wl-clipboard kdeconnect matugen-bin
+yay -S hyprland xdg-desktop-portal-hyprland rofi alacritty swww polkit-kde-agent wlogout hyprlock hypridle grim slurp swappy lf ttf-fira-sans otf-font-awesome spicetify-cli waybar cava nemo swaync wl-clipboard kdeconnect matugen-bin
 ```
 
 ### Git
