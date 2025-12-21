@@ -7,7 +7,7 @@
 
   "custom/appmenu": {
     "format": "Apps",
-    "on-click": "killall rofi || rofi -show drun -theme ~/.config/rofi/global/rofi.rasi",
+    "on-click": "killall rofi || exec ~/.config/rofi/launchers/type-2/launcher.sh",
     "tooltip": false
   },
 
