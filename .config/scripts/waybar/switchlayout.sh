@@ -7,4 +7,6 @@ case "$1" in
   "Island") ln -sf ~/.config/waybar-themes/island ~/.config/waybar ;;
 esac
 
-exec ~/.config/waybar/launch.sh
+exec ~/.config/waybar/launch.sh &
+
+notify-send Waybar "Layout changed to $1"
