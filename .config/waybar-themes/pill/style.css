@@ -1,0 +1,198 @@
+/*
+ * __        __          _                  ____  _         _       
+ * \ \      / /_ _ _   _| |__   __ _ _ __  / ___|| |_ _   _| | ___  
+ *  \ \ /\ / / _` | | | | '_ \ / _` | '__| \___ \| __| | | | |/ _ \ 
+ *   \ V  V / (_| | |_| | |_) | (_| | |     ___) | |_| |_| | |  __/ 
+ *    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    |____/ \__|\__, |_|\___| 
+ *                 |___/                              |___/         
+ *  
+ * ----------------------------------------------------- 
+*/
+
+/* -----------------------------------------------------
+ * Import colors 
+ * ----------------------------------------------------- */
+@import "colors.css";
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+  margin: 0 .6rem;
+  padding: 0 .6rem;
+
+  font-family: "FiraSans Semibold", "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+
+  border-radius: 3rem;
+}
+
+window#waybar {
+  margin: 0px;
+  padding: 0px;
+
+  color: @text;
+
+  background: transparent;
+}
+
+window#waybar > box .modules-left, .modules-center, .modules-right {
+  margin: 0;
+  padding: 0;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+  padding: 1.25rem;
+  
+  background-color: @background;
+  
+  opacity: 0.8;
+}
+
+tooltip label {
+  color: @on_surface;
+}
+
+/*  _          __ _
+ * | |    ___ / _| |_
+ * | |   / _ \ |_| __|
+ * | |__|  __/  _| |_
+ * |_____\___|_|  \__|
+*/
+
+/* -----------------------------------------------------
+ * Appmenu
+ * ----------------------------------------------------- */
+
+#custom-appmenu {
+  color: @primary;
+  background-color: @background;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+  background-color: @background;
+}
+
+/*  ____           _
+ * / ___|___ _ __ | |_ ___ _ __
+ * | |   / _ \ '_ \| __/ _ \ '__|
+ * | |__|  __/ | | | ||  __/ |
+ * \____\___|_| |_|\__\___|_|
+*/
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+  padding: 0;
+    
+  font-weight: bold;
+
+  background-color: @background;
+}
+
+#workspaces button {
+  margin: .3rem;
+  padding: 0;
+
+  background-color: @secondary_container;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces box {
+  margin: 0;
+  padding: 0;
+}
+
+#workspaces label {
+  margin: 0;
+  padding: 0 .6rem;
+}
+
+#workspaces button.active {
+  min-width: 3.5rem;
+
+  color: @primary;
+  background-color: @primary_container;
+}
+
+#workspaces button:hover {
+  color: @on_primary;
+  background-color: @on_primary_container;
+}
+
+/*  ____  _       _     _
+ * |  _ \(_) __ _| |__ | |_
+ * | |_) | |/ _` | '_ \| __|
+ * |  _ <| | (_| | | | | |_
+ * |_| \_\_|\__, |_| |_|\__|
+ *          |___/
+*/
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray image {
+  margin: 0;
+}
+
+#tray menu {
+  margin: 0;
+}
+
+/* -----------------------------------------------------
+ * Custom Updates
+ * ----------------------------------------------------- */
+
+#custom-updates {
+  color: @primary;
+  background-color: @background;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+  color: @primary;
+  background-color: @background;
+}
+#pulseaudio.muted {
+  color: @error;
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network {
+  color: @primary;
+  background-color: @background;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#glock {
+  padding: 0;
+
+  color: @primary;
+  background-color: @background;
+}

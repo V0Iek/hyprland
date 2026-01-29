@@ -1,7 +1,7 @@
 #!/bin/bash
 
-THEME="Catppuccin-Mocha-Standard-Lavender-Dark"
-ICONS="Sweet-Blue"
+THEME="Orchis-Dark-Catppuccin"
+ICONS="Tela"
 FONT="Fira Sans Semibold 10"
 CURSOR="McMojave-cursors"
 

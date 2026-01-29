@@ -1,0 +1,17 @@
+[
+  {
+    "output": "DP-1",
+    "layer": "top",
+    "position": "top",
+    "mode": "dock",
+    "margin-top": 10,
+    "margin-bottom": 0,
+    "reload_style_on_change": true,
+
+    // Load Modules
+    "include": ["~/.config/waybar/modules.json"],
+
+    "modules-center": [ "clock", "hyprland/workspaces", "pulseaudio", "network", "custom/notification" ],
+    "modules-right": [ "tray" ],
+  }
+]
