@@ -57,7 +57,7 @@ tooltip {
 }
 
 tooltip label {
-  color: @on_surface;
+  color: @text;
 }
 
 /*  ____           _
@@ -74,7 +74,7 @@ tooltip label {
 #clock {
   padding: 0;
 
-  color: @primary;
+  color: @text;
 }
 
 /* -----------------------------------------------------
@@ -91,7 +91,7 @@ tooltip label {
   margin: .3rem;
   padding: 0;
 
-  background-color: @secondary_container;
+  background-color: @workspaces-bg;
 
   transition: all 0.3s ease-in-out;
 }
@@ -109,13 +109,13 @@ tooltip label {
 #workspaces button.active {
   min-width: 3.5rem;
 
-  color: @primary;
-  background-color: @primary_container;
+  color: @workspace-active;
+  background-color: @workspace-active-bg;
 }
 
 #workspaces button:hover {
-  color: @on_primary;
-  background-color: @on_primary_container;
+  color: @text;
+  background-color: @text;
 }
 
 /* -----------------------------------------------------
@@ -123,10 +123,10 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  color: @primary;
+  color: @volume;
 }
 #pulseaudio.muted {
-  color: @error;
+  color: @volume-muted;
 }
 
 /* -----------------------------------------------------
@@ -134,7 +134,7 @@ tooltip label {
  * ----------------------------------------------------- */
 
 #network {
-  color: @primary;
+  color: @network;
 }
 
 /* -----------------------------------------------------
@@ -144,7 +144,7 @@ tooltip label {
 #custom-notification {
   padding: 0;
 
-  color: @primary;
+  color: @notifications;
 }
 
 /*  ____  _       _     _

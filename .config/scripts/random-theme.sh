@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wallpaper_dir="$HOME/.Wallpapers"
+wallpaper_dir="$HOME/.wallpapers"
 wallpapers=("$wallpaper_dir"/*)
 
 random_wallpaper="${wallpapers[RANDOM % ${#wallpapers[@]}]}"

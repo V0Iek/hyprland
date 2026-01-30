@@ -3,7 +3,7 @@
 source "$HOME"/.config/rofi/applets/shared/theme.bash
 theme="$type/$style"
 
-WALL_DIR="$HOME/.Wallpapers"
+WALL_DIR="$HOME/.wallpapers"
 
 mesg="Available Wallpapers: `find "$WALL_DIR" -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.webp" -o -iname "*.jpeg" \) | wc -l`"
 
