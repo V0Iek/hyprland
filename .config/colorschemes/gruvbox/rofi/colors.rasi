@@ -1,0 +1,12 @@
+// Catppuccin color theme
+
+* {
+  text:         #cdd6f4;
+  placeholder:  #6c7086;
+
+  background:   #1e1e2e;
+
+  selected:     #89b4fa;
+
+  second:       #b4befe;
+}
