@@ -27,5 +27,8 @@ ln -sf "$theme_path/waybar/colors.css" "$HOME/.config/waybar-themes/island/color
 # Rofi
 ln -sf "$theme_path/rofi/colors.rasi" "$HOME/.config/rofi/shared/colors.rasi"
 
+# Swaync
+ln -sf "$theme_path/swaync/colors.css" "$HOME/.config/swaync/colors.css"
+
 # Notification
 notify-send "Theme" "Theme switched to $theme"
