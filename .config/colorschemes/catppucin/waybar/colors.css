@@ -10,4 +10,8 @@
 
 @define-color network #cba6f7;
 
-@define-color notifications #a6e3a1;
+@define-color battery #a6e3a1;
+@define-color batwarning #f9e2af;
+@define-color batcritical #f38ba8;
+
+@define-color notifications #94e2d5;
