@@ -22,9 +22,11 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}",
+    "format": "{format_source} {icon}",
     "format-bluetooth": "{icon} ",
     "format-muted": "󰝟 ",
+    "format-source": "",
+    "format-source-muted": "󰍭",
     "format-icons": {
       "headphone": " ",
       "hands-free": " ",
@@ -32,7 +34,7 @@
       "phone": " ",
       "portable": " ",
       "car": " ",
-      "default": ["󰕿 ", "󰖀 ", "󰕾 "]
+      "default": ["󰕿 ", "󰖀 ", "󰕾 "],
     },
     "scroll-step": 1,
     "on-click": "./.config/rofi/applets/audiooutputswitcher.sh",
