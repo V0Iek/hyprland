@@ -9,7 +9,7 @@ Ensure you have the following installed on your system
 ### Dependencies
 
 ``` sh 
-yay -S --needed hyprland xdg-desktop-portal-hyprland rofi kitty swww polkit-kde-agent wlogout hyprlock hypridle grim slurp swappy lf ttf-fira-sans otf-font-awesome spicetify-cli waybar cava nemo swaync wl-clipboard kdeconnect udiskie cliphist wl-clip-persist
+yay -S --needed hyprland xdg-desktop-portal-hyprland rofi kitty swww polkit-kde-agent wlogout hyprlock hypridle grim slurp satty lf ttf-fira-sans otf-font-awesome spicetify-cli waybar cava nemo swaync wl-clipboard kdeconnect udiskie cliphist wl-clip-persist
 ```
 
 ### Git
