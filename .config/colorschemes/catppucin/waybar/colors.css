@@ -2,7 +2,8 @@
 @define-color background #1e1e2e;
 
 @define-color workspaces-bg #45475a;
-@define-color workspace-active-bg #89b4fa;
+@define-color workspace-active-bg #74c7ec;
+@define-color workspace-active-bgg #cba6f7;
 @define-color workspace-active #313244;
 
 @define-color volume #fab387;

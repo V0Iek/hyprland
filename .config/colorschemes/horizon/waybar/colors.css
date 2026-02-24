@@ -1,0 +1,18 @@
+@define-color text #d4d7d9;
+@define-color background #22232a;
+
+@define-color workspaces-bg #2E303E;
+@define-color workspace-active-bg #27D796;
+@define-color workspace-active-bgg #E95379;
+@define-color workspace-active #22232a;
+
+@define-color volume #F09383;
+@define-color volume-muted #F43E5C;
+
+@define-color network #B877DB;
+
+@define-color battery #09F7A0;
+@define-color batwarning #F09383;
+@define-color batcritical #F43E5C;
+
+@define-color notifications #21BFC2;

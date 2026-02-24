@@ -91,7 +91,7 @@ tooltip label {
   margin: .3rem;
   padding: 0;
 
-  background-color: @workspaces-bg;
+  background-color: @workspace-bg;
 
   transition: all 0.3s ease-in-out;
 }
@@ -110,7 +110,7 @@ tooltip label {
   min-width: 3.5rem;
 
   color: @workspace-active;
-  background-color: @workspace-active-bg;
+  background: linear-gradient(45deg, @workspace-active-bg 15%, @workspace-active-bgg 85%);
 }
 
 #workspaces button:hover {

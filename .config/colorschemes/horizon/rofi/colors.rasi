@@ -1,0 +1,11 @@
+// Horizon color theme
+
+* {
+  text:         #d4d7d9;
+  placeholder:  #6C6F93;
+
+  background:   #22232a;
+
+  selected:     #26BBD9;
+  error:        #E95678;
+}

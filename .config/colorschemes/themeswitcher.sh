@@ -33,5 +33,9 @@ ln -sf "$theme_path/swaync/colors.css" "$HOME/.config/swaync/colors.css"
 # Vesktop
 ln -sf "$theme_path/vesktop/colors.css" "$HOME/.var/app/dev.vencord.Vesktop/config/vesktop/themes/colors.css"
 
+# Reload & set Wallpaper
+exec "$HOME/.config/hypr/scripts/reload.sh" &
+exec "$HOME/.config/scripts/random-theme.sh"
+
 # Notification
 notify-send "Theme" "Theme switched to $theme"

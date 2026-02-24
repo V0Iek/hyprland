@@ -67,10 +67,14 @@ message {
 
   padding:          10px;
   
-  text-color:       @selected;
   calc-error-color: @error;
 
   border:           none;
+}
+
+textbox {
+  text-color:       @selected;
+  calc-error-color: @error;
 }
 
 listview {
