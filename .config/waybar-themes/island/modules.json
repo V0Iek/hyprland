@@ -77,7 +77,7 @@
       "critical": 15
     },
     "format": "{icon}",
-    "format-icons": [ "", "", "", "", "" ],
+    "format-icons": [ "", "", "", "", "", ],
     "format-charging": "󰚥{icon}",
     "max-length": 25
   },

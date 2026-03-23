@@ -12,4 +12,4 @@ swww img "$IMAGE" --transition-type=any --transition-fps=60 --transition-step=25
 echo "$IMAGE"
 
 rm ~/.config/hypr/wallpaper.png
-cp "$HOME/.wallpapers/$IMAGE" ~/.config/hypr/wallpaper.png
+cp "$IMAGE" ~/.config/hypr/wallpaper.png
