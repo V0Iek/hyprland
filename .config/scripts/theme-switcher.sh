@@ -7,7 +7,7 @@ fi
 
 IMAGE="$1"
 
-swww img "$IMAGE" --transition-type=any --transition-fps=60 --transition-step=255
+awww img "$IMAGE" --transition-type=any --transition-fps=60 --transition-step=255
 
 echo "$IMAGE"
 
