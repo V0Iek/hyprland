@@ -1,8 +1,7 @@
 {
   "dependencies": {
     "ags": "*",
-    "gnim": "*",
-    "sass": "^1.97.3"
+    "gnim": "*"
   },
   "prettier": {
     "semi": false,

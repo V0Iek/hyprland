@@ -1,10 +1,9 @@
 import app from "ags/gtk4/app"
-import { Astal, Gtk, Gdk } from "ags/gtk4"
-import { execAsync } from "ags/process"
-import { createPoll } from "ags/time"
+import { Astal, Gdk } from "ags/gtk4"
+import Time from "./Time"
+import Workspaces from "./Workspaces"
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
-  const time = createPoll("", 1000, () => new Date().toString())
   const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
 
   return (
@@ -18,13 +17,7 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
       application={app}
     >
       <centerbox cssName="centerbox">
-        <box $type="center" />
-        <menubutton $type="center" hexpand halign={Gtk.Align.CENTER}>
-          <label label={time} />
-          <popover>
-            <Gtk.Calendar />
-          </popover>
-        </menubutton>
+        <Time/>
       </centerbox>
     </window>
   )

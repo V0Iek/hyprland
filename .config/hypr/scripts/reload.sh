@@ -4,5 +4,7 @@ killall swaync
 
 hyprpm reload
 
-exec $HOME/.config/waybar/launch.sh
+exec $HOME/.config/waybar/launch.sh &
 swaync &
+
+exec $HOME/.config/ags/launch.sh &
