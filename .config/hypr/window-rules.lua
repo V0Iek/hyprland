@@ -18,8 +18,8 @@ hl.window_rule({
   opacity =           0.0,
 })
 
-hl.window_rule({ match = { class = "Spotify" },                                   workspace = "magic", no_initial_focus = true })
-hl.window_rule({ match = { class = "vesktop" },                                   workspace = "magic", no_initial_focus = true })
+hl.window_rule({ match = { class = "Spotify" },                                   workspace = "special:magic", no_initial_focus = true })
+hl.window_rule({ match = { class = "vesktop" },                                   workspace = "special:magic", no_initial_focus = true })
 hl.window_rule({ match = { class = "org.kde.polkit-kde-authentication-agent-1" }, float = true })
 hl.window_rule({ match = { class = "org.gnome.FileRoller" },                      float = true })
 hl.window_rule({ match = { class = "file-roller" },                               float = true })

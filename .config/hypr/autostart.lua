@@ -29,11 +29,11 @@ hl.on("hyprland.start", function ()
   hl.exec_cmd("kdeconnect-indicator")
 
   -- Clipboard Manager
-  hl.exec_once("wl-paste --type text --watch cliphist store")   -- Stores only text data
-  hl.exec_once("wl-paste --type image --watch cliphist store")  -- Stores only image data
+  hl.exec_cmd("wl-paste --type text --watch cliphist store")   -- Stores only text data
+  hl.exec_cmd("wl-paste --type image --watch cliphist store")  -- Stores only image data
 
   -- Apps
   hl.exec_cmd("openrgb --startminimized")
-  hl.exec_cmd("flatpak run com.spotify.Client")
+  hl.exec_cmd("spotify")
   hl.exec_cmd("flatpak run dev.vencord.Vesktop")
 end)

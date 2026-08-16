@@ -27,10 +27,15 @@ hl.bind(mainMod .. " + B",          hl.dsp.exec_cmd("flatpak run app.zen_browser
 ----------------
 ---- Layout ----
 ----------------
-hl.bind(mainMod .. " + V",        hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + J",        hl.dsp.layout("togglesplit"))
---hl.bind(mainMod .. " + PERIOD",   hl.dsp.layout.scrolling({ action = "toggle" })) --toggle scrolling layout
-hl.bind(mainMod .. " + period",   hl.dsp.exec_cmd("~/.config/hypr/scripts/togglescrolling.sh"))
+hl.bind(mainMod .. " + V",      hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + J",      hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + period", function()
+  if hl.get_config("general.layout") == "dwindle" then
+    hl.config({ general = { layout = "scrolling" } })
+  else
+    hl.config({ general = { layout = "dwindle" } })
+  end
+end)
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
@@ -48,7 +53,24 @@ hl.bind(mainMod .. " + W",  hl.dsp.exec_cmd("~/.config/scripts/theme-switcher-gu
 ------------------
 ---- Gamemode ----
 ------------------
-hl.bind(mainMod .. " + G",  hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"))
+hl.bind(mainMod .. " + G", function()
+  if hl.get_config("animations.enabled") == true then
+    hl.config({ animations = { enabled = false } })
+    hl.config({ decoration = {
+      shadow            = { enabled = false },
+      blur              = { enabled = false },
+      rounding          = false,
+      inactive_opacity  = 1,
+    } })
+    hl.config({ general = {
+      gaps_in     = 0,
+      gaps_out    = 0,
+      border_size = 1,
+    } })
+  else
+    hl.exec_cmd("hyprctl reload")
+  end
+end)
 
 --------------------
 ---- Workspacec ----
@@ -57,8 +79,8 @@ hl.bind(mainMod .. " + G",  hl.dsp.exec_cmd("~/.config/hypr/scripts/gamemode.sh"
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
-    hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-    hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+    hl.bind(mainMod .. " + " .. key,          hl.dsp.focus({ workspace = i}))
+    hl.bind(mainMod .. " + SHIFT + " .. key,  hl.dsp.window.move({ workspace = i }))
 end
 
 -- Special workspace (scratchpad)
@@ -89,7 +111,7 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
-hl.bind(mainMod .. " + A",  hl.dsp.exec_cmd("~/.config/rofi/applets/audiooutputswitcher.sh"))
+hl.bind(mainMod .. " + A",          hl.dsp.exec_cmd("~/.config/rofi/applets/audiooutputswitcher.sh"))
 hl.bind(mainMod .. " + SHIFT + M",  hl.dsp.exec_cmd("~/.config/scripts/toggle-source-mute.sh"))
 
 --------------------
