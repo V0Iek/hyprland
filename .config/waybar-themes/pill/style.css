@@ -55,7 +55,7 @@ tooltip {
 }
 
 tooltip label {
-  color: @on_surface;
+  color: @text;
 }
 
 /*  _          __ _
@@ -109,7 +109,7 @@ window#waybar.empty #window {
   margin: .3rem;
   padding: 0;
 
-  background-color: @secondary_container;
+  background-color: @workspaces-bg;
 
   transition: all 0.3s ease-in-out;
 }
@@ -127,13 +127,13 @@ window#waybar.empty #window {
 #workspaces button.active {
   min-width: 3.5rem;
 
-  color: @primary;
-  background-color: @primary_container;
+  color: @workspace-active;
+  background: linear-gradient(45deg, @workspace-active-bg 15%, @workspace-active-bgg 85%);
 }
 
 #workspaces button:hover {
-  color: @on_primary;
-  background-color: @on_primary_container;
+  color: @text;
+  background-color: @text;
 }
 
 /*  ____  _       _     _
@@ -170,11 +170,11 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #pulseaudio {
-  color: @primary;
+  color: @volume;
   background-color: @background;
 }
 #pulseaudio.muted {
-  color: @error;
+  color: @volume-muted;
 }
 
 /* -----------------------------------------------------
@@ -182,7 +182,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #network {
-  color: @primary;
+  color: @network;
   background-color: @background;
 }
 
@@ -193,6 +193,6 @@ window#waybar.empty #window {
 #glock {
   padding: 0;
 
-  color: @primary;
+  color: @text;
   background-color: @background;
 }

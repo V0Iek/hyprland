@@ -1,12 +1,13 @@
-// Catppuccin color theme
+// Gruvbox color theme
 
 * {
-  text:         #cdd6f4;
-  placeholder:  #6c7086;
+  text:         #ebdbb2;
+  placeholder:  #bdae93;
 
-  background:   #1e1e2e;
+  background:   #282828;
 
-  selected:     #89b4fa;
+  selected:     #b8bb26;
+  error:        #fb4934;
 
-  second:       #b4befe;
+  second:       #83a598;
 }

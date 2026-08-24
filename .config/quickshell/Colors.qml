@@ -1,0 +1,1 @@
+/home/michal/.config/colorschemes/gruvbox/quickshell/colors.qml

@@ -91,7 +91,7 @@ tooltip label {
   margin: .3rem;
   padding: 0;
 
-  background-color: @workspace-bg;
+  background-color: @workspaces-bg;
 
   transition: all 0.3s ease-in-out;
 }

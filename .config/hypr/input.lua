@@ -26,9 +26,8 @@ hl.gesture({
     action = "workspace"
 })
 
--- Example per-device config
--- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
+-- Logitech G502
 hl.device({
-    name        = "epic-mouse-v1",
+    name        = "logitech-g502-1",
     sensitivity = -0.5,
 })

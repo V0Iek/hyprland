@@ -9,7 +9,7 @@
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 local terminal    = "kitty"
-local fileManager = "nautlius"
+local fileManager = "nautilus"
 local menu        = "rofi -show drun"
 
 -----------------
