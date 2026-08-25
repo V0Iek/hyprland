@@ -119,7 +119,7 @@ Scope {
 
                 MouseArea {
                   anchors.fill: parent
-
+                  cursorShape: Qt.PointingHandCursor
                   onClicked: function() {
                     root.notification.dismiss();
                     root.shouldShowOsd = false;
