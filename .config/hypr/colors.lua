@@ -1,6 +1,6 @@
 return {
-  primary =   "rgb(b8bb26)",
-  secondary = "rgb(fabd2f)",
-  inactive =  "rgb(282828)",
-  text =      "rgb(ebdbb2)",
+  primary =   "rgb(89b4fa)",
+  secondary = "rgb(b4befe)",
+  inactive =  "rgb(1e1e2e)",
+  text =      "rgb(cdd6f4)",
 }
