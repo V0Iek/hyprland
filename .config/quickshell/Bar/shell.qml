@@ -32,6 +32,7 @@ ShellRoot {
       SystemTray {}
       Volume {}
       Network {}
+      Battery {}
       Clock {}
     }
   }
