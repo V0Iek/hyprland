@@ -31,26 +31,33 @@ Scope {
 
     visible: root.isOpen
 
-    implicitWidth: 400
-
     anchors {
       top: true
       right: true
       bottom:true
-    }
-
-    margins {
-      top: 20
-      right: 20
-      bottom: 20
+      left: true
     }
 
     exclusiveZone: 0
 
     color: "transparent"
 
-    Rectangle {
+    MouseArea {
       anchors.fill: parent
+      onClicked: { root.isOpen = false }
+    }
+
+    Rectangle {
+      implicitWidth: 400
+
+      anchors {
+        top: parent.top
+        right: parent.right
+        bottom: parent.bottom
+        topMargin: 20
+        rightMargin: 20
+        bottomMargin: 20
+      }
 
       color: Colors.bg
 
@@ -79,7 +86,18 @@ Scope {
           Item { Layout.fillWidth: true }
 
           Rectangle {
+            implicitWidth: clear_text.implicitWidth + 20
+            implicitHeight: parent.implicitHeight 
+
+            color: Colors.wsInactiveBg
+
+            radius: height / 2
+
             Text {
+              id: clear_text
+
+              anchors.centerIn: parent
+
               text: "Clear"
 
               font {
@@ -89,6 +107,15 @@ Scope {
               }
 
               color: Colors.text
+            }
+
+            MouseArea {
+              anchors.fill: parent
+              cursorShape: Qt.PointingHandCursor
+              onClicked: {
+                var notifs = notifyServer.trackedNotifications.values;
+                for (var i = notifs.length - 1; i >= 0; i--) notifs[i].dismiss()
+              }
             }
           }
         }

@@ -25,7 +25,7 @@ Rectangle {
     property int percentage: Math.round(battery.percentage * 100)
 
     property string icon: {
-      if (battery.changeRate > 0) return String.fromCodePoint(0xf06a5)
+      if (battery.changeRate < 0) return String.fromCodePoint(0xf06a5)
       if (percentage > 80) return String.fromCodePoint(0xf240)
       if (percentage > 60) return String.fromCodePoint(0xf241)
       if (percentage > 40) return String.fromCodePoint(0xf242)
