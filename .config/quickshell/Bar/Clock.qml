@@ -53,7 +53,7 @@ Rectangle{
 
       Process {
         id: toggleProcess
-        command: [ "quickshell", "-p", "/home/michal/.config/quickshell/Notifications", "ipc", "call", "notify-center", "toggle" ]
+        command: [ "quickshell", "-p", "/home/michal/.config/quickshell/Notifications", "ipc", "call", "notifications", "toggle" ]
       }
 
       MouseArea {
