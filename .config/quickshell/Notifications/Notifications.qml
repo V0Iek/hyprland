@@ -13,6 +13,10 @@ Scope {
   NotificationServer {
     id: notifyServer
 
+    actionsSupported: true
+    bodySupported: true
+    imageSupported: true
+
     onNotification: function(n) {
       root.notification = n
 

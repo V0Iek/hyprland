@@ -21,6 +21,10 @@ Scope {
   NotificationServer {
     id: notifyServer
 
+    actionsSupported: true
+    bodySupported: true
+    imageSupported: true
+
     onNotification: function(n) {
       n.tracked = true;
     }
