@@ -18,7 +18,7 @@ Rectangle {
   visible: true
 
   Layout.fillWidth: true
-  Layout.preferredHeight: layout.implicitHeight + 20
+  implicitHeight: layout.implicitHeight + 20
 
   color: Colors.bg
 

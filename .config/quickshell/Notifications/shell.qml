@@ -27,6 +27,7 @@ Scope {
 
   Center {
     show: root.centerOpen
+    notifications: server.trackedNotifications
   }
 
   PanelWindow {

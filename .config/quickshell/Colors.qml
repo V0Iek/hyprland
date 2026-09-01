@@ -1,1 +1,1 @@
-/home/michal/.config/colorschemes/catppucin/quickshell/colors.qml
+/home/michal/.config/colorschemes/gruvbox/quickshell/colors.qml
